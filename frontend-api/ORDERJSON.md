@@ -1,0 +1,121 @@
+## Order.json
+
+Sikeres rendelés oldalon el lehet helyezni olyan scripteket, amelyek képesek az adott rendelés adatait elérni. 
+
+A ShopRenter javascript objektum **lastOrder** property-je tartalmazza a rendeléshez tartozó adatokat, úgy mint a rendeléshez tartozó adatokat, illetve a megrendelt termékek adatait.
+
+Az objektum szenzitív adatokat nem tartalmaz, amely alapján azonosítható lenne a Vevő.
+
+Példa:
+```javascript
+console.log(ShopRenter.lastOrder);
+```
+
+### Egyes mezők jelentése:
+
+<table> 
+    <tr>
+        <th>property</th>
+        <th>jelentés</th>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>a rendelés azonosítója</td>
+    </tr>
+    <tr>
+        <td>customerGroup</td>
+        <td>a vevő csoport azonosítója</td>
+    </tr>  
+    <tr>
+        <td>total</td>
+        <td>Rendelés utáni teljes fizetendő összeg</td>
+    </tr> 
+    <tr>
+        <td>orderStatusId</td>
+        <td>A rendelés utáni állapot azonosítója</td>
+    </tr>
+    <tr>
+        <td>currency</td>
+        <td>A valuta, amellyel végbement a rendelés</td>
+    </tr>
+    <tr>
+        <td>dateAdded</td>
+        <td>A rendelés létrejöttének a dátuma</td>
+    </tr>
+    <tr>
+        <td>shipping.methodName</td>
+        <td>A szállítási mód a rendelés nyelvén megjelenített neve</td>
+    </tr>
+    <tr>
+        <td>shipping.methodCode</td>
+        <td>A szállítási mód szöveges azonosítója</td>
+    </tr>
+    <tr>
+        <td>shipping.country</td>
+        <td>Ország neve, a rendelés nyelvén</td>
+    </tr>
+    <tr>
+        <td>shipping.countryId</td>
+        <td>Az ország azonosítója</td>
+    </tr>
+    <tr>
+        <td>shipping.vatRate</td>
+        <td>A szállítási módhoz tartozó áfa mértéke</td>
+    </tr>
+    <tr>
+        <td>shipping.expectedDelivery</td>
+        <td>Várható szállítási idő timestamp-ben</td>
+    </tr>
+    <tr>
+        <td>payment.methodName</td>
+        <td>A fizetési mód a rendelés nyelvén megjelenített neve</td>
+    </tr>
+    <tr>
+        <td>payment.methodCode</td>
+        <td>A fizetési mód szöveges azonosítója</td>
+    </tr>
+    <tr>
+        <td>payment.vatRate</td>
+        <td>A fizetési módhoz tartozó áfa mértéke</td>
+    </tr>
+    <tr>
+        <td>coupon.id</td>
+        <td>A coupon azonosítója</td>
+    </tr>
+    <tr>
+        <td>coupon.vatRate</td>
+        <td>A kuponhoz tartozó áfa mértéke.</td>
+    </tr>
+    <tr>
+        <td>products</td>
+        <td>Tartalmazza a rendelésben szereplő termékeket</td>
+    </tr>
+    <tr>
+        <td>products.id</td>
+        <td>A termék azonosítója</td>
+    </tr>
+    <tr>
+        <td>products.title</td>
+        <td>A termék neve</td>
+    </tr>
+    <tr>
+        <td>products.unitPrice</td>
+        <td>A termék egységára</td>
+    </tr>
+    <tr>
+        <td>products.totalPrice</td>
+        <td>A termék teljes ára (mennyiség * egységár)</td>
+    </tr>
+    <tr>
+        <td>products.vatRate</td>
+        <td>A termékhez tartozó áfa mértéke</td>
+    </tr>
+    <tr>
+        <td>products.quantity</td>
+        <td>Mennyiség</td>
+    </tr>
+    <tr>
+        <td>products.sku</td>
+        <td>A termék cikkszáma</td>
+    </tr>
+</table>
