@@ -1,5 +1,8 @@
 ## Dokumentációk app fejlesztők részére
 
+#### ShopRenter App fejlesztés
+- [Kezdeti lépések](app-development/GETTING_STARTED.md)
+
 #### ShopRenter API
 [www.shoprenter.hu/api/doc](https://www.shoprenter.hu/api/doc)
 
@@ -11,5 +14,5 @@
 ## Példa alkalmazások
 
 #### PHP
-- [SR PHP App demo](https://github.com/Shoprenter/sr-app)
-- [SR Node App demo](https://github.com/Shoprenter) hamarosan
+- [SR Demo app PHP](https://github.com/Shoprenter/sr-demo-app-php)
+- [SR Demo app Node.js](https://github.com/Shoprenter/sr-demo-app-node)
