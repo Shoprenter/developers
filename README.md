@@ -13,6 +13,5 @@
 
 ## Példa alkalmazások
 
-#### PHP
 - [SR Demo app PHP](https://github.com/Shoprenter/sr-demo-app-php)
 - [SR Demo app Node.js](https://github.com/Shoprenter/sr-demo-app-node)
