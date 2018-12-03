@@ -1,6 +1,6 @@
 ## Cart.json API
 
-### GET /frontend/cart
+### GET /cart.json
 
 Ezt az endpointot lehet használni, ha szeretnénk kikérni a kosár tartalmát JavaScripttel.
 
@@ -64,3 +64,9 @@ $.ajax({
     }
 });
 ```
+### GET /cart/reload/{token}
+
+Ez az endpoint a kosár visszatöltésére szolgál.
+A token helyére a cart tokent kell megadni.
+Ha helyes tokent adtunk meg, akkor visszakapjuk az adott tokenhez tartozó kosár tartalmat, majd átirányít minket a kosár oldalra.
+Ha rossz tokent adunk át, akkor nem változik a kosár tartalma, de szintén átirányít a kosár oldalra.
