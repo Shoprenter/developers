@@ -119,35 +119,35 @@ console.log(ShopRenter.lastOrder);
         <td>A termék cikkszáma</td>
     </tr>
     <tr>
-        <td>products.giftwrapping</td>
+        <td>products.giftWrapping</td>
         <td>Az egyes termékekre, a Vevő által kért ajándékcsomagolás adatai. Ha az adott termékre nem kér csomagolást, úgy üres tömb lesz ezen a property-n</td>
     </tr>
     <tr>
-        <td>products.giftwrapping.id</td>
+        <td>products.giftWrapping.id</td>
         <td>A csomagolás belső azonosítója</td>
     </tr>
     <tr>
-        <td>products.giftwrapping.sku</td>
+        <td>products.giftWrapping.sku</td>
         <td>A csomagolás cikkszáma</td>
     </tr>
     <tr>
-        <td>products.giftwrapping.price</td>
+        <td>products.giftWrapping.price</td>
         <td>A csomagolás nettó ára</td>
     </tr>
     <tr>
-        <td>products.giftwrapping.vat</td>
+        <td>products.giftWrapping.vat</td>
         <td>A csomagolás ÁFÁ-ja</td>
     </tr>
     <tr>
-        <td>products.giftwrapping.name</td>
+        <td>products.giftWrapping.name</td>
         <td>A csomagolás neve</td>
     </tr>
     <tr>
-        <td>products.giftwrapping.quantityName</td>
+        <td>products.giftWrapping.quantityName</td>
         <td>A csomagolás mértékegységének a neve, pl.: doboz</td>
     </tr>
     <tr>
-        <td>giftwrapping</td>
+        <td>giftWrapping</td>
         <td>A kosár ajándék csomagolása. Ugyan olyan a felépítése, mint amikor egyesével csomagolnánk be a termékeket. Ha a teljes kosárra nem kér a Vevő csomaglást, úgy üres tömb lesz ezen a property-n</td>
     </tr>
     <tr>
