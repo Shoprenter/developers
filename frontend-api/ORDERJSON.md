@@ -168,6 +168,6 @@ console.log(ShopRenter.lastOrder);
     </tr>
     <tr>
         <td>loyaltyPoints.totalValue</td>
-        <td>A teljes összeg, amit a Vevő hűségponttal fedezett a rendelés során. Ez a rendelésnek megfelelő valutába átváltva jelenik meg. (**currency** property)</td>
+        <td>A teljes összeg, amit a Vevő hűségponttal fedezett a rendelés során. Ez a rendelésnek megfelelő valutába átváltva jelenik meg. (<strong>currency</strong> property)</td>
     </tr>
 </table>
