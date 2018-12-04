@@ -128,7 +128,7 @@ console.log(ShopRenter.lastOrder);
     </tr>
     <tr>
         <td>products.giftwrapping.sku</td>
-        <td>A csomaglás cikkszáma</td>
+        <td>A csomagolás cikkszáma</td>
     </tr>
     <tr>
         <td>products.giftwrapping.price</td>
