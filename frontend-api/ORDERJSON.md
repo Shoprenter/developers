@@ -118,4 +118,56 @@ console.log(ShopRenter.lastOrder);
         <td>products.sku</td>
         <td>A termék cikkszáma</td>
     </tr>
+    <tr>
+        <td>products.giftWrapping</td>
+        <td>Az egyes termékekre, a Vevő által kért ajándékcsomagolás adatai. Ha az adott termékre nem kér csomagolást, úgy üres tömb lesz ezen a property-n</td>
+    </tr>
+    <tr>
+        <td>products.giftWrapping.id</td>
+        <td>A csomagolás belső azonosítója</td>
+    </tr>
+    <tr>
+        <td>products.giftWrapping.sku</td>
+        <td>A csomagolás cikkszáma</td>
+    </tr>
+    <tr>
+        <td>products.giftWrapping.price</td>
+        <td>A csomagolás nettó ára</td>
+    </tr>
+    <tr>
+        <td>products.giftWrapping.vat</td>
+        <td>A csomagolás ÁFÁ-ja</td>
+    </tr>
+    <tr>
+        <td>products.giftWrapping.name</td>
+        <td>A csomagolás neve</td>
+    </tr>
+    <tr>
+        <td>products.giftWrapping.quantityName</td>
+        <td>A csomagolás mértékegységének a neve, pl.: doboz</td>
+    </tr>
+    <tr>
+        <td>giftWrapping</td>
+        <td>A kosár ajándék csomagolása. Ugyan olyan a felépítése, mint amikor egyesével csomagolnánk be a termékeket. Ha a teljes kosárra nem kér a Vevő csomaglást, úgy üres tömb lesz ezen a property-n</td>
+    </tr>
+    <tr>
+        <td>loyaltyPoints</td>
+        <td>A rendelésben felhasznált hűségpont adatai. Ha nincs engedélyve a hűségpont rendszer, vagy az adott rendeléshez nem használtak hűségpontot, úgy üres tömb van ezen property-n</td>
+    </tr>
+    <tr>
+        <td>loyaltyPoints.usedPoints</td>
+        <td>A rendelésben felhasznált pontok darabszáma</td>
+    </tr>
+    <tr>
+        <td>loyaltyPoints.valueOfOnePoint</td>
+        <td>Egy pont értéke HUF-ban</td>
+    </tr>
+    <tr>
+        <td>loyaltyPoints.vatRate</td>
+        <td>ÁFA értéke. Csak a számlázó programba való átadást érinti, a hűségpont értékét nem módosítja.</td>
+    </tr>
+    <tr>
+        <td>loyaltyPoints.totalValue</td>
+        <td>A teljes összeg, amit a Vevő hűségponttal fedezett a rendelés során. Ez a rendelésnek megfelelő valutába átváltva jelenik meg. (<strong>currency</strong> property)</td>
+    </tr>
 </table>
