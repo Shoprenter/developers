@@ -13,6 +13,7 @@ Példa:
     "subTotalWithTax": 2476.5,
     "total": 2476.5,
     "taxTotal": 526.5,
+    "token": "27828acb2141b0b16bbfc14358b0cbcd1d26aee0860c5",
     "itemCount": 1,
     "items": {
         "409": {
@@ -46,6 +47,7 @@ Példa üres kosárra:
     "subTotalWithTax": 0,
     "total": 0,
     "taxTotal": 0,
+    "token": "",
     "itemCount": 0,
     "items": []
 }
@@ -55,7 +57,7 @@ Példakód a használatra:
 ```javascript
 $.ajax({
     type: 'GET',
-    url: 'https://demo.shoprenter.hu/frontend/cart',
+    url: 'https://demo.shoprenter.hu/cart.json',
     success: function(res) {
         console.log(res);
     },
