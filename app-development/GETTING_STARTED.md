@@ -29,6 +29,6 @@ A post requestnek tarttalmaznia kell az alábbi mezőket:
     - **timestamp:** a requestben kapott timestamp
     - **hmac:** a requestben kapott hmac
 5. Amennyiben a ShopRenter megfelelőnek találja a POST requestet egy username, password párossal fog válaszolni amivel az app hozzáfér az adott bolt API-jához.
-6. A kiszolgáló ha megkapta az authentikációs adatokat redirecttel a [refererDomain]/admin/app/[appId] url-re, ahol a refererDomain-t érdemes a request header-ből kiszedni, mivel a boltoknak egyedi domain neve is lehet.
+6. A kiszolgáló ha megkapta az authentikációs adatokat redirecttel a https://[refererDomain]/admin/app/[appId] url-re, ahol a refererDomain-t érdemes a request header-ből kiszedni, mivel a boltoknak egyedi domain neve is lehet.
 7. A ShopRenter egy Iframeben megnyitja az apphoz tartozó EntryPoint-ot. A request tartalmazni fogja a 2. pontban írt paramétereket.
 8. Feltelepítés után a ShopRenter csak az Entrypointra küld kéréseket. Minden esetben a 2. pontban írt paraméterekkel.
