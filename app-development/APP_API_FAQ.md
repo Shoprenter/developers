@@ -1,12 +1,12 @@
-#APP és API - Gyakori kérdések app fejlesztőknek
+# APP és API - Gyakori kérdések app fejlesztőknek
 
-#####Ha le akarom kérdezni egy resource adatait, akkor nekem kell a base64-es resource kódot legenerálnom?
+##### Ha le akarom kérdezni egy resource adatait, akkor nekem kell a base64-es resource kódot legenerálnom?
 
 Ez a legelső lépés, amit el szoktak rontani az API-ra történő fejlesztésnél. Ne generáld magadnak az azonosítókat! Miért? Időközben a resource azonosítás változhat az API-ban, esetleg teljesen átalakulhat a linkek generálása részünkről. URL visszafejtéssel sose foglalkozz. Bár így több lekérdezést kell elvégezned, de nem fogsz függeni a resource azonosításának funkcionalitásától.
 
 ---
 
-#####Mi a helyes megoldás, ha mégis konkrét resource-ra szeretnék rákérdezni?
+##### Mi a helyes megoldás, ha mégis konkrét resource-ra szeretnék rákérdezni?
 
 Ez helyzetfüggő, ha konkrétan tudod, mire akarsz rákérdezni az API-ból, akkor már legalább egy resource ID-d van. A termékeknél például van lehetőség **_sku_** szerint lekérdezni. Még egy lehetőség az Outer ID használata. Arról, hogy hogyan tudsz kereső paramétereket használni egy adott resource-nál vagy hogyan lehet létrehozni Outer ID-kat, a dokumentációban olvashatsz bővebben:
 
@@ -17,7 +17,7 @@ https://support.shoprenter.hu/hc/hu/articles/215106158-ShopRenter-API#outerid
 ---
 
 
-#####Az Outer ID-t is base64 formában kellene létrehoznunk?
+##### Az Outer ID-t is base64 formában kellene létrehoznunk?
 
 Nem, az Outer ID bármilyen string lehet. A lényeg, hogy ezt a ti oldalatokon letárolva, 
 könnyen lekérdezhettek resource-okat, nem kell a base64-es resource azonosítókkal bajlódnotok.
@@ -26,7 +26,7 @@ könnyen lekérdezhettek resource-okat, nem kell a base64-es resource azonosít�
 ---
 
 
-#####Az app fejlesztésekor nekünk kell kérni a felhasználótól az API autentikációs adatokat?
+##### Az app fejlesztésekor nekünk kell kérni a felhasználótól az API autentikációs adatokat?
 
 Nem, ez teljesen automatikus. Mikor települ az appotok, az autentikációs URL-eken lévő kód
  fogja elkérni az aktuális ShopRenter bolthoz az API autentikációs adatokat. Itt le kell 
@@ -35,7 +35,7 @@ Nem, ez teljesen automatikus. Mikor települ az appotok, az autentikációs URL-
 ---
 
 
-#####Mire szolgál a client secret és a client id, ha az API-nak van külön autentikációs adata?
+##### Mire szolgál a client secret és a client id, ha az API-nak van külön autentikációs adata?
 
 A ShopRenter az appokkal való kommunikáció során Oauth szabványú hitelesítést használ.
 Ez arra szolgál, hogy az ShopRenter tudja, hogy tőletek származnak a kérések,
@@ -44,7 +44,7 @@ Ez arra szolgál, hogy az ShopRenter tudja, hogy tőletek származnak a kérése
 ---
 
 
-#####Az ShopRenter adminon ugye az Integrációk menüpontban kellene látnom az appunkat. Miért nem látom?
+##### Az ShopRenter adminon ugye az Integrációk menüpontban kellene látnom az appunkat. Miért nem látom?
 
 Nem ott fog megjelenni. Egyelőre egy rejtett route-on, boltnev.shoprenter.hu/admin/app/list oldalon vannak
  felsorolva az appok, amelyet majd idővel publikálni fogunk.
@@ -52,7 +52,7 @@ Nem ott fog megjelenni. Egyelőre egy rejtett route-on, boltnev.shoprenter.hu/ad
 ---
 
 
-#####Új Vevő resource létrehozásánál milyen formátumú telefonszám az elfogadott?
+##### Új Vevő resource létrehozásánál milyen formátumú telefonszám az elfogadott?
 
 https://github.com/googlei18n/libphonenumber package-et használjuk a 
 telefonszámok kezelésére. Érdemes áttanulmányozni, illetve ezt használni a telefonszámok 
@@ -61,7 +61,7 @@ bevitelénél, így a formátum probléma elkerülhető.
 ---
 
 
-#####Új Vevő resource létrehozásánál milyen formátumú telefonszám az elfogadott?
+##### Új Vevő resource létrehozásánál milyen formátumú telefonszám az elfogadott?
 
 https://github.com/googlei18n/libphonenumber package-et használjuk a telefonszámok kezelésére.
 Érdemes áttanulmányozni, illetve ezt használni a telefonszámok bevitelénél, így a formátum probléma elkerülhető.
@@ -69,13 +69,13 @@ https://github.com/googlei18n/libphonenumber package-et használjuk a telefonsz�
 
 ---
 
-####Új Vevő resource létrehozásánál, a jelszavakat miképpen kezeli a ShopRenter?
+#### Új Vevő resource létrehozásánál, a jelszavakat miképpen kezeli a ShopRenter?
 
 A jelszavak kódolására bcryptet használunk, azaz nektek is így kell felvenni új Vevő (Customer) esetén.
 
 ---
 
-####Ha rendelésekkel dolgozok, és nyomon akarom követni az újonnan beérkezett rendeléseket, mindig le kell kérdeznem az API-n keresztül az összes rendelést?
+#### Ha rendelésekkel dolgozok, és nyomon akarom követni az újonnan beérkezett rendeléseket, mindig le kell kérdeznem az API-n keresztül az összes rendelést?
 
 Nem szükséges. Van lehetőség webhook-ot létrehozni például “Új rendelés feladás” eseményre, melynek megadható
 egy endpoint. Az esemény kiváltása után az általatok megadott URL-re a rendszer elküldi az új rendelés adatait:
