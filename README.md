@@ -6,6 +6,9 @@
 #### ShopRenter API
 [www.shoprenter.hu/api/doc](https://www.shoprenter.hu/api/doc)
 
+#### ShopRenter API és APP
+- [Gyakori kérdések](app-development/APP_API_FAQ.md)
+
 #### ShopRenter Frontend API
 - [Cart.js API](frontend-api/CARTJS_API.md)
 - [Cart.json API](frontend-api/CARTJSON_API.md)
