@@ -61,14 +61,6 @@ bevitelénél, így a formátum probléma elkerülhető.
 ---
 
 
-##### Új Vevő resource létrehozásánál milyen formátumú telefonszám az elfogadott?
-
-https://github.com/googlei18n/libphonenumber package-et használjuk a telefonszámok kezelésére.
-Érdemes áttanulmányozni, illetve ezt használni a telefonszámok bevitelénél, így a formátum probléma elkerülhető.
-
-
----
-
 #### Új Vevő resource létrehozásánál, a jelszavakat miképpen kezeli a ShopRenter?
 
 A jelszavak kódolására bcryptet használunk, azaz nektek is így kell felvenni új Vevő (Customer) esetén.
