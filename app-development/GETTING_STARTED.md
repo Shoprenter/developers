@@ -2,13 +2,18 @@
 
 ### Az App integrációhoz szükséges adatok:
 
-- **App neve:** ez fog megjelenni a telepíthető alkalmazások listájába. **Az app tulaja adja.**
-- **AppId:** app azonosítója a ShopRenteren belül. ShopRenter adja.
-- **ClientId:** App azonosító. ShopRenter adja
-- **ClientSecret:** Kulcs a kérések azonosításához. ShopRenter adja.
-- **EntryPoint:** Az app belépési pontja. Az app fejlesztője adja. HTTPS-protokollon keresztül elérhetőnek kell lennie. **Az app tulaja adja.**
-- **RedirectUri:** Az app authentikációs belépési pontja ezen az url-en keresztül fogja az authentikációs adatokat igényelni az adott ShopRenter-es bolt API-jához. HTTPS protokollon keresztül elérhetőnek kell lennie. **Az app tulaja adja.**
+**Az app tulaja adja.**
+- **App neve:** ez fog megjelenni a telepíthető alkalmazások listájába.
+- **EntryPoint:** Az app belépési pontja. Az app fejlesztője adja. HTTPS-protokollon keresztül elérhetőnek kell lennie.
+- **RedirectUri:** Az app authentikációs belépési pontja ezen az url-en keresztül fogja az authentikációs adatokat igényelni az adott ShopRenter-es bolt API-jához. HTTPS protokollon keresztül elérhetőnek kell lennie.
+- **App logo:** az app listában megjelenő logó kép (250x150px).
+- **App rövid leírása:** Maximum 70 karakteres rövid szöveg.
+- **App részletek link:** Az alkalmazás részleteire/sales oldalára mutató link.
 
+**ShopRenter adja.**
+- **AppId:** app azonosítója a ShopRenteren belül. 
+- **ClientId:** App azonosító.
+- **ClientSecret:** Kulcs a kérések azonosításához.
 
 ### App telepítésének menete:
 1. A felhasználó az app telepítésére kattint a ShopRenter admin felületén.
