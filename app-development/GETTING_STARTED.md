@@ -9,6 +9,7 @@
 - **Alkalmazás logo:** az alkalmazás listában megjelenő logó kép (**250x150px**).
 - **Alkalmazás rövid leírása:** Maximum 70 karakteres rövid szöveg.
 - **Alkalmazás részletek link:** Az alkalmazás részleteire/sales oldalára mutató link.
+- **Alakalmazás típusa:** Az alkalmazás lehet admin felületbe ágyazott vagy átírányításos. Beágyazásnál az apphoz tartozó, ShopRenter adminonos url-jére érkezve, az entry point-nak megadott url-t hívjuk be egy iframe-be. Átírányításnál pedig szimplán átírányítunk az entry pointra.
 
 **ShopRenter adja.**
 - **AppId:** alkalmazás azonosítója a ShopRenteren belül. 
