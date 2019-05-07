@@ -30,7 +30,7 @@ console.log(ShopRenter.theme.name);
            <ul>
               <li><strong>code</strong>: A valuta nyelvi kódja</li>
               <li><strong>rate</strong>: A bolt alapértelmezett valutájához mérten használt pénznem váltó érték.
-                  Pl.: 1-et kell elosztanunk az adott pénznem árfolyamának értékével, például ha a valuta árfolyama 195 Ft, akkor az értékmező: 1/195, tehát 0,005128-at
+                  Pl.: 1-et kell elosztanunk az adott pénznem árfolyamának értékével, például ha a valuta árfolyama 195 Ft, akkor az értékmező: 1/195, tehát 0,005128 lesz a rate
               </li>
            </ul>
         </td>
