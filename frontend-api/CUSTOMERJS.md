@@ -1,4 +1,4 @@
-## Customer.json
+## Customer.js
 
 A bolt frontendjének minden oldalán lekérhető az aktuális Vevő néhány adata,
 melyet ShopRenter javascript objektum **customer** property-je tartalmazza. 
