@@ -13,6 +13,10 @@
 - [Cart.js API](frontend-api/CARTJS_API.md)
 - [Cart.json API](frontend-api/CARTJSON_API.md)
 - [Order.json](frontend-api/ORDERJSON.md)
+- [Customer.js](frontend-api/THEMEJS.md)
+- [Shop.js](frontend-api/CUSTOMERJS.md)
+- [Theme.js](frontend-api/THEMEJS.md)
+
 
 ## Példa alkalmazások
 
