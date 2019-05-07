@@ -34,7 +34,9 @@ Példa:
             ],
             "values": [
               
-            ]
+            ],
+            "weight": 0,
+            "weightClass": "kg"
         }
     }
 }
