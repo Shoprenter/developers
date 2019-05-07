@@ -1,4 +1,4 @@
-## Theme.json
+## Theme.js
 
 A bolt frontendjének minden oldalán lekérhető az aktuális sablon néhány adata,
 melyet ShopRenter javascript objektum **theme** property-je tartalmazza. 
