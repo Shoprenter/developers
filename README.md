@@ -12,7 +12,7 @@
 #### ShopRenter Frontend API
 - [ShopRenter.js](frontend-api/SHOPRENTERJS_API.md)
 - [Cart.json API](frontend-api/CARTJSON_API.md)
-- [Order.json](frontend-api/ORDERJSON.md)
+- [Order.js](frontend-api/ORDERJS.md)
 
 ## Példa alkalmazások
 - [SR Demo app PHP](https://github.com/Shoprenter/sr-demo-app-php)

@@ -1,5 +1,4 @@
-## Order.json
-
+## Order.js
 Sikeres rendelés oldalon el lehet helyezni olyan scripteket, amelyek képesek az adott rendelés adatait elérni. 
 
 A ShopRenter javascript objektum **lastOrder** property-je tartalmazza a rendeléshez tartozó adatokat, úgy mint az általános adatok (szállítási és fizetési mód, valuta stb.), illetve a megrendelt termékek adatait.

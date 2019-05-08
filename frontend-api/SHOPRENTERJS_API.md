@@ -8,7 +8,7 @@
     * [onItemAdd](#onitemadd)
     * [onCartUpdate](#oncartupdate)
     * [onItemDelete](#onitemdelete)
-    * [Események használata](#esemnyek-hasznlata)
+    * [Események használata](#esem%C3%A9nyek-haszn%C3%A1lata)
 
 # ShopRenter Object
 A frontendre beépülő alkalmazásoknál szükség lehet olyan adatokra, melyek elengedhetetlenek az alkalmazás üzleti logikájához.
