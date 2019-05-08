@@ -23,7 +23,7 @@ Az objektum szenzitív adatokat nem tartalmaz, amely alapján azonosítható len
 
 Példa:
 ```javascript
-console.log(ShopRenter.customer.user_id);
+console.log(ShopRenter.customer.userId);
 ```
 
 Egyes mezők jelentése:
