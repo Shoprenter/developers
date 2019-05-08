@@ -33,15 +33,15 @@ Egyes mezők jelentése:
         <th>jelentés</th>
     </tr>
     <tr>
-        <td>user_id</td>
+        <td>userId</td>
         <td>A Vevő belső id-ja. Ha 0, akkor a Vevő nem regisztrált felhasználó</td>
     </tr>
     <tr>
-        <td>user_group_id</td>
+        <td>userGroupId</td>
         <td>A vevő vásárlói csoportjának azonosítója</td>
     </tr>  
     <tr>
-        <td>customer_group_tax_mode</td>
+        <td>customerGroupTaxMode</td>
         <td>
            Megadja az aktuális Vevő vásárlói csoportja szerint, hogy a <strong>termékoldalon kívül</strong>, milyen módon jelenjen meg az ár
            <ul>
@@ -51,7 +51,7 @@ Egyes mezők jelentése:
         </td>
     </tr> 
     <tr>
-        <td>customer_group_price_mode</td>
+        <td>customerGroupPriceMode</td>
         <td>
            Megadja az aktuális Vevő vásárlói csoportja szerint, hogy a <strong>termékoldalon</strong>, milyen módon jelenjen meg az ár
               <li><strong>only_gross</strong>: Csak a bruttó ár kiírása</li>
