@@ -84,7 +84,7 @@ Egyes mezők jelentése:
     </tr>
     <tr>
         <td>family</td>
-        <td>A sablon család neve, amelybe az aktuélis sablon tartozik</td>
+        <td>A sablon család neve, amelybe az aktuális sablon tartozik</td>
     </tr>  
     <tr>
         <td>parent</td>
