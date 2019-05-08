@@ -10,15 +10,10 @@
 - [Gyakori kérdések](app-development/APP_API_FAQ.md)
 
 #### ShopRenter Frontend API
-- [Cart.js API](frontend-api/CARTJS_API.md)
+- [ShopRenter.js](frontend-api/SHOPRENTERJS_API.md)
 - [Cart.json API](frontend-api/CARTJSON_API.md)
 - [Order.json](frontend-api/ORDERJSON.md)
-- [Customer.js](frontend-api/CUSTOMERJS.md)
-- [Shop.js](frontend-api/SHOPJS.md)
-- [Theme.js](frontend-api/THEMEJS.md)
-
 
 ## Példa alkalmazások
-
 - [SR Demo app PHP](https://github.com/Shoprenter/sr-demo-app-php)
 - [SR Demo app Node.js](https://github.com/Shoprenter/sr-demo-app-node)

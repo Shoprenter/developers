@@ -1,5 +1,143 @@
-## Cart.js API
+# Tartalomjegyzék
+* [ShopRenter Object](#shoprenter-object)
+  * [Properties](#properties)
+    * [customer](#customer)
+    * [theme](#theme)
+    * [shop](#shop)
+  * [Events](#events)
+    * [onItemAdd](#onitemadd)
+    * [onCartUpdate](#oncartupdate)
+    * [onItemDelete](#onitemdelete)
+    * [Események használata](#esemnyek-hasznlata)
 
+# ShopRenter Object
+A frontendre beépülő alkalmazásoknál szükség lehet olyan adatokra, melyek elengedhetetlenek az alkalmazás üzleti logikájához.
+A ShopRenter globális JavaScript objektum frontenden elérhető minden oldalbetöltődésnél, amely webshop adatokat tároló objektumokat és eseményfigyelőket tartalmaz.
+
+## Properties
+
+### customer
+A bolt frontendjének minden oldalán lekérhető az aktuális Vevő néhány adata,
+melyet ShopRenter javascript objektum **customer** property-je tartalmazza. 
+Az objektum szenzitív adatokat nem tartalmaz, amely alapján azonosítható lenne a Vevő.
+
+Példa:
+```javascript
+console.log(ShopRenter.customer.user_id);
+```
+
+Egyes mezők jelentése:
+<table> 
+    <tr>
+        <th>property</th>
+        <th>jelentés</th>
+    </tr>
+    <tr>
+        <td>user_id</td>
+        <td>A Vevő belső id-ja. Ha 0, akkor a Vevő nem regisztrált felhasználó</td>
+    </tr>
+    <tr>
+        <td>user_group_id</td>
+        <td>A vevő vásárlói csoportjának azonosítója</td>
+    </tr>  
+    <tr>
+        <td>customer_group_tax_mode</td>
+        <td>
+           Megadja az aktuális Vevő vásárlói csoportja szerint, hogy a <strong>termékoldalon kívül</strong>, milyen módon jelenjen meg az ár
+           <ul>
+              <li><strong>gross</strong>: Bruttó ár</li>
+              <li><strong>net</strong>: Nettó ár</li>
+           </ul>
+        </td>
+    </tr> 
+    <tr>
+        <td>customer_group_price_mode</td>
+        <td>
+           Megadja az aktuális Vevő vásárlói csoportja szerint, hogy a <strong>termékoldalon</strong>, milyen módon jelenjen meg az ár
+              <li><strong>only_gross</strong>: Csak a bruttó ár kiírása</li>
+              <li><strong>gross_net_tax</strong>: Bruttó ár, mögötte zárójelben a nettó + ÁFA kiírása</li>
+              <li><strong>only_net</strong>: Csak a nettó ár kiírása</li>
+              <li><strong>net_tax</strong>: A nettó ár és mögötte a + ÁFA kiírása/li>
+              <li><strong>net_tax_gross</strong>: A nettó ár és mögötte a + ÁFA kiírása, illetve zárójelben a bruttó ár kiírása</li>
+        </td>
+    </tr>
+</table>
+
+### theme
+A bolt frontendjének minden oldalán lekérhető az aktuális sablon néhány adata,
+melyet ShopRenter javascript objektum **theme** property-je tartalmazza. 
+
+Példa:
+```javascript
+console.log(ShopRenter.theme.name);
+```
+
+Egyes mezők jelentése:
+<table> 
+    <tr>
+        <th>property</th>
+        <th>jelentés</th>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>A sablon neve</td>
+    </tr>
+    <tr>
+        <td>family</td>
+        <td>A sablon család neve, amelybe az aktuélis sablon tartozik</td>
+    </tr>  
+    <tr>
+        <td>parent</td>
+        <td>
+           A szülő sablon neve 
+        </td>
+    </tr>
+</table>
+
+### shop
+A bolt frontendjének minden oldalán lekérhető a bolt fontosabb adata,
+melyet ShopRenter javascript objektum **theme** property-je tartalmazza. 
+
+Példa:
+```javascript
+console.log(ShopRenter.theme.name);
+```
+
+Egyes mezők jelentése:
+<table> 
+    <tr>
+        <th>property</th>
+        <th>jelentés</th>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>A bolt neve</td>
+    </tr>
+    <tr>
+        <td>locale</td>
+        <td>A bolt aktuális frontend nyelve</td>
+    </tr>  
+    <tr>
+        <td>currency</td>
+        <td>
+           A bolt aktuális valutájára vonatkozó adatok:
+           <ul>
+              <li><strong>code</strong>: A valuta nyelvi kódja</li>
+              <li><strong>rate</strong>: A bolt alapértelmezett valutájához mérten használt pénznem váltó érték.
+                  Pl.: 1-et kell elosztanunk az adott pénznem árfolyamának értékével, például ha a valuta árfolyama 195 Ft, akkor az értékmező: 1/195, tehát 0,005128 lesz a rate
+              </li>
+           </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>domain</td>
+        <td>
+           A bolt rendszer domain-ja
+        </td>
+    </tr>
+</table>
+
+## Events
 A ShopRenter egyes kosár események bekövetkezésekor kiváltanak olyan javascript eseményeket, melyre feliratkozva, azok kiváltódása után, további viselkedést valósíthatunk meg.
 
 Az új, hozzáadott eseményfigyelők (Event Listener) megkapják az eseményhez tartozó adatokat.
@@ -9,7 +147,7 @@ A rendszer az eseményt egy CustomEvent objektumba adja vissza, melynek a **deta
 ### onItemAdd
 Kosárba helyezés a bolt bármely részéről (modul termékkártya, termékoldal, kategóriaoldal). Megkapja a kosárba helyezett termék adatait.
 
-Example:
+Példa:
 ```json
 {
     "detail": {
@@ -135,10 +273,10 @@ Példa:
 }
 ```
 
-## Használata:
+Figyelni kell arra hogy az átadott javascript closure-nek legyen egy paramétere, melynek a neve tetszőleges lehet, pl.: event vagy e. Így az e.details property kikéréssel, hozzájutunk az esemény adataihoz.
 
+### Események használata
 A ShopRenter nevű objektum a frontend egész felületén elérhető, így bármely oldalon fel tudunk iratkozni a kosár eseményekre a következőképpen:
-
 
 ```html
 <script type="application/javascript">
@@ -147,5 +285,3 @@ ShopRenter.onCartUpdate(function(event) {
 });
 </script>
 ```
-
-Figyelni kell arra hogy az átadott javascript closure-nek legyen egy paramétere, melynek a neve tetszőleges lehet, pl.: event vagy e. Így az e.details property kikéréssel, hozzájutunk az esemény adataihoz.
