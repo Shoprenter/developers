@@ -23,7 +23,17 @@ Az objektum szenzitív adatokat nem tartalmaz, amely alapján azonosítható len
 
 Példa:
 ```javascript
-console.log(ShopRenter.customer.userId);
+console.log(ShopRenter.customer);
+```
+
+Kimenet:
+```javascript
+{
+    userId: 0, 
+    userGroupId: 8, 
+    customerGroupTaxMode: "gross", 
+    customerGroupPriceMode: "gross_net_tax"
+}
 ```
 
 Egyes mezők jelentése:
@@ -69,7 +79,16 @@ melyet ShopRenter javascript objektum **theme** property-je tartalmazza.
 
 Példa:
 ```javascript
-console.log(ShopRenter.theme.name);
+console.log(ShopRenter.theme);
+```
+
+Kimenet:
+```javascript
+{
+    name: "tokyo_glacierblue", 
+    family: "tokyo", 
+    parent: "bootstrap"
+}
 ```
 
 Egyes mezők jelentése:
@@ -100,7 +119,20 @@ melyet ShopRenter javascript objektum **theme** property-je tartalmazza.
 
 Példa:
 ```javascript
-console.log(ShopRenter.shop.name);
+console.log(ShopRenter.shop);
+```
+
+Kimenet:
+```javascript
+{
+    name: "tokyo", 
+    locale: "hu", 
+    currency: {
+        code: "HUF", 
+        rate: 1
+    }, 
+    domain: "tokyo.shoprenter.hu"
+}
 ```
 
 Egyes mezők jelentése:
