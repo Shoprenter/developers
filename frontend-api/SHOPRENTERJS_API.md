@@ -100,7 +100,7 @@ melyet ShopRenter javascript objektum **theme** property-je tartalmazza.
 
 Példa:
 ```javascript
-console.log(ShopRenter.theme.name);
+console.log(ShopRenter.shop.name);
 ```
 
 Egyes mezők jelentése:
@@ -273,7 +273,7 @@ Példa:
 }
 ```
 
-Figyelni kell arra hogy az átadott javascript closure-nek legyen egy paramétere, melynek a neve tetszőleges lehet, pl.: event vagy e. Így az e.details property kikéréssel, hozzájutunk az esemény adataihoz.
+Figyelni kell arra, hogy az átadott javascript closure-nek legyen egy paramétere, melynek a neve tetszőleges lehet, pl. event vagy e. Így az e.details property kikéréssel, hozzájutunk az esemény adataihoz.
 
 ### Események használata
 A ShopRenter nevű objektum a frontend egész felületén elérhető, így bármely oldalon fel tudunk iratkozni a kosár eseményekre a következőképpen:
