@@ -16,7 +16,7 @@ Példa:
     "token": "27828acb2141b0b16bbfc14358b0cbcd1d26aee0860c5",
     "itemCount": 1,
     "items": {
-        "409": {
+        {
             "id": 409,
             "name": "Potted Double Stem Kaleidoscope Orchid",
             "quantity": 1,
