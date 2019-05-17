@@ -15,7 +15,7 @@ Példa:
     "taxTotal": 526.5,
     "token": "27828acb2141b0b16bbfc14358b0cbcd1d26aee0860c5",
     "itemCount": 1,
-    "items": {
+    "items": [
         {
             "id": 409,
             "name": "Potted Double Stem Kaleidoscope Orchid",
@@ -38,7 +38,7 @@ Példa:
             "weight": 0,
             "weightClass": "kg"
         }
-    }
+    ]
 }
 ```
 
