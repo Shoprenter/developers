@@ -4,6 +4,7 @@
     * [customer](#customer)
     * [theme](#theme)
     * [shop](#shop)
+    * [page](#page)
   * [Events](#events)
     * [onItemAdd](#onitemadd)
     * [onCartUpdate](#oncartupdate)
@@ -166,6 +167,33 @@ Egyes mezők jelentése:
         <td>
            A bolt rendszer domain-ja
         </td>
+    </tr>
+</table>
+
+### page
+A ShopRenter objektum **page** property tartalmazza az aktuális oldal adatait.
+
+Példa:
+```javascript
+console.log(ShopRenter.page);
+```
+
+Kimenet:
+```javascript
+{
+    route: "product/list"
+}
+```
+
+Egyes mezők jelentése:
+<table> 
+    <tr>
+        <th>property</th>
+        <th>jelentés</th>
+    </tr>
+    <tr>
+        <td>route</td>
+        <td>Az adott aloldal route értéke</td>
     </tr>
 </table>
 
