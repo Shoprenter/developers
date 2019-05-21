@@ -6,6 +6,7 @@
 - **Alkalmazás neve:** ez fog megjelenni a telepíthető alkalmazások listájába.
 - **EntryPoint:** Az alkalmazás belépési pontja. Az alkalmazás fejlesztője adja. HTTPS-protokollon keresztül elérhetőnek kell lennie.
 - **RedirectUri:** Az alkalmazás authentikációs belépési pontja ezen az url-en keresztül fogja az authentikációs adatokat igényelni az adott ShopRenter-es bolt API-jához. HTTPS protokollon keresztül elérhetőnek kell lennie.
+- **UninstallUri:** Az alkalmazás törlése után egy GET kérés lesz elküldve erre az URL-re, hogy az alkalmazás még egy utolsó műveletet tudjon végrehajtani. (Megjegyzés: QueryString-ben hozzá lesznek fűzve a következő adatok: shopname, code, timestamp, hmac.)
 - **Alkalmazás logo:** az alkalmazás listában megjelenő logó kép (**250x150px**).
 - **Alkalmazás rövid leírása:** Maximum 70 karakteres rövid szöveg.
 - **Alkalmazás részletek link:** Az alkalmazás részleteire/sales oldalára mutató link.
