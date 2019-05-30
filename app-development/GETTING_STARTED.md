@@ -20,7 +20,7 @@
 
 ### Alkalmazás telepítésének menete:
 1. A felhasználó az alkalmazás telepítésére kattint a ShopRenter admin felületén.
-2. A Shoprenter egy iframeban meghívja az alkalmazás által bíztosított RedirectUri-t (GET request).
+2. A Shoprenter meghívja az alkalmazás által bíztosított RedirectUri-t (GET request).
     A hívás során átadott paraméterek:
     - **shopname:** a bolt neve amiből a hívást indították
     - **code:** generált hash
@@ -36,7 +36,7 @@ A post requestnek tarttalmaznia kell az alábbi mezőket:
     - **code:** a requestben kapod code
     - **timestamp:** a requestben kapott timestamp
     - **hmac:** a requestben kapott hmac
-5. Amennyiben a ShopRenter megfelelőnek találja a POST requestet egy username, password párossal fog válaszolni amivel az Alkalmazás hozzáfér az adott bolt API-jához.
+5. Amennyiben a ShopRenter megfelelőnek találja a POST requestet egy username, password párossal fog válaszolni amivel az Alkalmazás hozzáfér az adott bolt API-jához. A 2. lépésben indított ShopRenteres kérésben lévő timestamp arra szolgál, hogy megvizsgáljuk, a kliens alkalmazás **30 másodpercen belül** megkezdi-e a API hozzáférés kérését!
 6. A kiszolgáló ha megkapta az authentikációs adatokat redirecttel a https://[refererDomain]/admin/app/[appId] url-re, ahol a refererDomain-t érdemes a request header-ből kiszedni, mivel a boltoknak egyedi domain neve is lehet.
 7. A ShopRenter egy Iframeben megnyitja az alkalmazáshoz tartozó EntryPoint-ot. A request tartalmazni fogja a 2. pontban írt paramétereket.
 8. Feltelepítés után a ShopRenter csak az Entrypointra küld kéréseket. Minden esetben a 2. pontban írt paraméterekkel.
