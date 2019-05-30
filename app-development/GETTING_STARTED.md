@@ -2,6 +2,8 @@
 
 ### Az Alkalmazás integrációhoz szükséges adatok:
 
+Az alkalmazás beregisztrálásához szükséges adatokat kérjük elküldeni a partnersupport@shoprenter.hu email címre.
+
 **Az alkalmazás tulaja adja.**
 - **Alkalmazás neve:** ez fog megjelenni a telepíthető alkalmazások listájába.
 - **EntryPoint:** Az alkalmazás belépési pontja. Az alkalmazás fejlesztője adja. HTTPS-protokollon keresztül elérhetőnek kell lennie.
