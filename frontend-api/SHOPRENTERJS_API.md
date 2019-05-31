@@ -197,6 +197,50 @@ Egyes mezők jelentése:
     </tr>
 </table>
 
+### product
+A ShopRenter objektum **product** property tartalmazza a termékhez tartozó információkat. Ez a property csak termékoldalon érhető el!
+
+Példa:
+```javascript
+console.log(ShopRenter.product);
+```
+
+Kimenet:
+```javascript
+{
+    id: "201",
+    sku: "ASDF201",
+    parent: {
+        id: "200",
+        sku: "ASDF200"
+    }
+}
+```
+
+Egyes mezők jelentése:
+<table> 
+    <tr>
+        <th>property</th>
+        <th>jelentés</th>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Az aktuális termék azonosítója</td>
+    </tr>
+    <tr>
+        <td>sku</td>
+        <td>Az aktuális termék cikkszáma</td>
+    </tr>
+    <tr>
+        <td>parent.id</td>
+        <td>Az szülő termék azonosítója</td>
+    </tr>
+    <tr>
+        <td>parent.sku</td>
+        <td>Az szülő termék cikkszáma</td>
+    </tr>
+</table>
+
 ## Events
 A ShopRenter egyes kosár események bekövetkezésekor kiváltanak olyan javascript eseményeket, melyre feliratkozva, azok kiváltódása után, további viselkedést valósíthatunk meg.
 
