@@ -5,6 +5,7 @@
     * [theme](#theme)
     * [shop](#shop)
     * [page](#page)
+    * [product](#product)
   * [Events](#events)
     * [onItemAdd](#onitemadd)
     * [onCartUpdate](#oncartupdate)
