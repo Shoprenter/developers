@@ -174,8 +174,43 @@
 <td>Resource not found! {resource}</td>
 </tr>
 <tr>
+<td>403</td>
+<td>-</td>
+<td>Forbidden</td>
+</tr>
+<tr>
 <td>409</td>
 <td>40901</td>
 <td>Resource exists!</td>
+</tr>
+<tr>
+<td>429</td>
+<td>-</td>
+<td>Too Many Requests</td>
+</tr>
+</table>
+
+### 5xx Success
+
+<table>
+<tr>
+<th>Code</th>
+<th>Text</th>
+<th>Details</th>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+<td>When an error has occurred within the API.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable</td>
+<td>The server is currently unavailable.</td>
+</tr>
+<tr>
+<td>504</td>
+<td>Gateway Timeout</td>
+<td>The request could not complete in time. Try breaking it down in multiple smaller requests.</td>
 </tr>
 </table>
