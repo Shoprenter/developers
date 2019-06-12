@@ -4,7 +4,8 @@
 - [Kezdeti lépések](app-development/GETTING_STARTED.md)
 
 #### ShopRenter API
-[www.shoprenter.hu/api/doc](https://www.shoprenter.hu/api/doc)
+- [www.shoprenter.hu/api/doc](https://www.shoprenter.hu/api/doc)
+- [API status codes](api/STATUS_CODES.md)
 
 #### ShopRenter API és APP
 - [Gyakori kérdések](app-development/APP_API_FAQ.md)
