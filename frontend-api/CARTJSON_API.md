@@ -17,6 +17,7 @@ Példa:
     "itemCount": 1,
     "items": [
         {
+            "cartKey":"S7QytqrOtDKwzrQyNbAAkoZQbGSdaGVoVV1sZW6llF9QkpmfV6wEFDKwqq6trQUA",
             "id": 409,
             "sku": "POTTED3500",
             "name": "Potted Double Stem Kaleidoscope Orchid",
