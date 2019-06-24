@@ -38,6 +38,14 @@ A post requestnek tarttalmaznia kell az alábbi mezőket:
     - **code:** a requestben kapod code
     - **timestamp:** a requestben kapott timestamp
     - **hmac:** a requestben kapott hmac
+    
+    Amennyiben valamelyik adat hiányos vagy téves, úgy az API hibaüzenetet fog küldeni a megfelelő hibakóddal json formátumban. 
+    
+    **Hibák**:
+    - Ha elküldendő adatok közül valamelyik hiányzik, akkor **{"message":"Missing data in credential request","code":400}** választ fog adni.
+    - Ha elküldendő client_id és secret_id eltér, akkor **{"message":"App client and request client data mismatch","code":401}** választ fog adni.
+    - Ha a hitelesítési idő meghaladja a 30 másodpercet, akkor **{"message":"Authorization time expired","code":408}** választ fog adni.
+    - Ha a telepítés közben hiba merült fel, akkor  **{"message":"App is not installed","code":409}** választ fog adni.
 5. Amennyiben a ShopRenter megfelelőnek találja a POST requestet egy username, password párossal fog válaszolni amivel az Alkalmazás hozzáfér az adott bolt API-jához. A 2. lépésben indított ShopRenteres kérésben lévő timestamp arra szolgál, hogy megvizsgáljuk, a kliens alkalmazás **30 másodpercen belül** megkezdi-e a API hozzáférés kérését!
 6. A kiszolgáló ha megkapta az authentikációs adatokat redirecttel a https://[refererDomain]/admin/app/[appId] url-re, ahol a refererDomain-t érdemes a request header-ből kiszedni, mivel a boltoknak egyedi domain neve is lehet.
 7. A ShopRenter egy Iframeben megnyitja az alkalmazáshoz tartozó EntryPoint-ot. A request tartalmazni fogja a 2. pontban írt paramétereket.
