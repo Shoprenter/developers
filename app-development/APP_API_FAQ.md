@@ -40,8 +40,7 @@ Ez arra szolgál, hogy az ShopRenter tudja, hogy tőletek származnak a kérése
 
 #### Az ShopRenter adminon ugye az Integrációk menüpontban kellene látnom az appunkat. Miért nem látom?
 
-Nem ott fog megjelenni. Egyelőre egy rejtett route-on, boltnev.shoprenter.hu/admin/app/list oldalon vannak
- felsorolva az appok, amelyet majd idővel publikálni fogunk.
+Nem ott fog megjelenni. Az applikációk az Alkalmazások menüpont alatt találhatóak meg.
 
 ---
 
