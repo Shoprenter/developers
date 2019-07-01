@@ -65,3 +65,10 @@ Nem szükséges. Van lehetőség webhook-ot létrehozni például “Új rendel�
 egy endpoint. Az esemény kiváltása után az általatok megadott URL-re a rendszer elküldi az új rendelés adatait:
 
 https://www.shoprenter.hu/api/doc#webhook
+
+---
+
+#### Mi a különbség az Extend resource-ok és a full kapcsoló között?
+**Extend resource:** Egy konkrét resource egyed adatainak kapcsolódó adatainak a lekérdezését, illetve módosítását tudjuk egyetlen egy kéréssel végrehajtani. (Pl. így megkaphatjuk egy termék adatait, illetve a hozzátartozó leírásokat és nem csak egy link-et kapunk a termék leírását tartalmazó resource egyedre.)
+
+**A full paraméter:** Egy resource egyed kollekció lekérdezésénél a normál resource-ok esetén a kapott listában csak a resource egyedekre mutató link-et látjuk. Ahhoz hogy elérjük a konkrét adatokat, egyedenként még egy kérést kell intéznünk a szerverhez. Hogy spórolni tudjunk a szükséges kérések számával, a `full=1` paraméterrel 1 lépésben kikérhetjük a kollekcióban az egyes resource egyedek adatait.
