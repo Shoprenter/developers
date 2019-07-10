@@ -71,3 +71,18 @@ https://www.shoprenter.hu/api/doc#webhook
 **Extend resource:** Egy konkrét resource egyed adatainak kapcsolódó adatainak a lekérdezését, illetve módosítását tudjuk egyetlen egy kéréssel végrehajtani. (Pl. így megkaphatjuk egy termék adatait, illetve a hozzátartozó leírásokat és nem csak egy link-et kapunk a termék leírását tartalmazó resource egyedre.)
 
 **A full paraméter:** Egy resource egyed kollekció lekérdezésénél a normál resource-ok esetén a kapott listában csak a resource egyedekre mutató link-et látjuk. Ahhoz hogy elérjük a konkrét adatokat, egyedenként még egy kérést kell intéznünk a szerverhez. Hogy spórolni tudjunk a szükséges kérések számával, a `full=1` paraméterrel 1 lépésben kikérhetjük a kollekcióban az egyes resource egyedek adatait.
+
+---
+
+#### Nem látjuk az alkalmazásunkat az iframe-ben, mi lehet a gond?
+
+1. 'Refused to display' hibát kapunk a DevTools console-ban. A megjelenítést valószínűleg a 'X-Frame-Options' HTTP response header blokkolja, mivel ez jelezzi a böngészőnek, hogy engedélyeznie kell-e az oldal megjelenítését.
+(Bővebben erről: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+
+---
+
+#### cUrl-lel hívom az API-t terminálból és a Batch feldolgozót használom, de nem hibát kapok vissza. Mi lehet a gond?
+
+1. -F kapcsolóval küldöm a POST adatokat, de 40014 - 'POST is either empty or content length exceeds the limit of %s bytes' hibát kapom.
+Az -F kapcsoló eleve multipart/form-data-ként küldi el az adatot, így nem kell a 'content-type' header-t mellékelned.
+(Bővebben erről: https://ec.haxx.se/http-postvspost.html)
