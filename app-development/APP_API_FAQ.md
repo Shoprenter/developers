@@ -81,6 +81,6 @@ https://www.shoprenter.hu/api/doc#webhook
 ---
 
 #### A cUrl hívás nem működik Batch API-val a terminálban, mi a gond?
--F kapcsolóval küldöm a POST adatokat, de 40014 - 'POST is either empty or content length exceeds the limit of %s bytes' hibát kapom.
-Az -F kapcsoló eleve multipart/form-data-ként küldi el az adatot, így nem kell a 'content-type' header-t mellékelned.
+`-F` kapcsolóval küldöm a POST adatokat, de `40014 - 'POST is either empty or content length exceeds the limit of %s bytes'` hibát kapom.
+Az `-F` kapcsoló eleve `multipart/form-data`-ként küldi el az adatot, így nem kell a 'content-type' header-t mellékelned.
 (Bővebben erről: https://ec.haxx.se/http-postvspost.html)
