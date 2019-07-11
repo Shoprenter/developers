@@ -75,7 +75,7 @@ https://www.shoprenter.hu/api/doc#webhook
 ---
 
 #### Nem látjuk az alkalmazásunkat az iframe-ben, mi lehet a gond?
-'Refused to display' hibát kapunk a DevTools console-ban. A megjelenítést valószínűleg a 'X-Frame-Options' HTTP response header blokkolja, mivel ez jelezzi a böngészőnek, hogy engedélyeznie kell-e az oldal megjelenítését.
+'Refused to display' hibát kapunk a DevTools console-ban. A megjelenítést valószínűleg a 'X-Frame-Options' HTTP response header blokkolja, mivel ez jelzi a böngészőnek, hogy engedélyeznie kell-e az oldal megjelenítését.
 (Bővebben erről: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
 
 ---
