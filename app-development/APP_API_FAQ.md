@@ -75,14 +75,12 @@ https://www.shoprenter.hu/api/doc#webhook
 ---
 
 #### Nem látjuk az alkalmazásunkat az iframe-ben, mi lehet a gond?
-
-1. 'Refused to display' hibát kapunk a DevTools console-ban. A megjelenítést valószínűleg a 'X-Frame-Options' HTTP response header blokkolja, mivel ez jelezzi a böngészőnek, hogy engedélyeznie kell-e az oldal megjelenítését.
+'Refused to display' hibát kapunk a DevTools console-ban. A megjelenítést valószínűleg a 'X-Frame-Options' HTTP response header blokkolja, mivel ez jelezzi a böngészőnek, hogy engedélyeznie kell-e az oldal megjelenítését.
 (Bővebben erről: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
 
 ---
 
-#### cUrl-lel hívom az API-t terminálból és a Batch feldolgozót használom, de nem hibát kapok vissza. Mi lehet a gond?
-
-1. -F kapcsolóval küldöm a POST adatokat, de 40014 - 'POST is either empty or content length exceeds the limit of %s bytes' hibát kapom.
+#### A cUrl hívás nem működik Batch API-val a terminálban, mi a gond?
+-F kapcsolóval küldöm a POST adatokat, de 40014 - 'POST is either empty or content length exceeds the limit of %s bytes' hibát kapom.
 Az -F kapcsoló eleve multipart/form-data-ként küldi el az adatot, így nem kell a 'content-type' header-t mellékelned.
 (Bővebben erről: https://ec.haxx.se/http-postvspost.html)
