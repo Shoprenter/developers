@@ -5,8 +5,12 @@
 
 #### ShopRenter API
 - [Követelmények és korlátozások](app-development/APP_API_CONSTRAINTS_REQUIREMENTS.md)
+- [Lehetséges válaszkódok és hibaüzenetek](api/STATUS_CODES.md)
+- [A full paraméter](api/FULL_PARAMETER.md)
+- [API batch feldolgozó](api/BATCH_API.md)
+- [API Outer ID használata](api/API_OUTER_ID.md)
+- [Kiterjesztett Resourceok (Extend Resource)](api/EXTEND_RESOURCE.md)
 - [www.shoprenter.hu/api/doc](https://www.shoprenter.hu/api/doc)
-- [API status codes](api/STATUS_CODES.md)
 
 #### ShopRenter API és APP
 - [Gyakori kérdések](app-development/APP_API_FAQ.md)
