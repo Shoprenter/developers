@@ -2,6 +2,7 @@
 
 #### ShopRenter App fejlesztés
 - [Kezdeti lépések](app-development/GETTING_STARTED.md)
+- [Gyakori kérdések](app-development/APP_API_FAQ.md)
 
 #### ShopRenter API
 - [Követelmények és korlátozások](app-development/APP_API_CONSTRAINTS_REQUIREMENTS.md)
@@ -11,9 +12,6 @@
 - [API Outer ID használata](api/API_OUTER_ID.md)
 - [Kiterjesztett Resourceok (Extend Resource)](api/EXTEND_RESOURCE.md)
 - [www.shoprenter.hu/api/doc](https://www.shoprenter.hu/api/doc)
-
-#### ShopRenter API és APP
-- [Gyakori kérdések](app-development/APP_API_FAQ.md)
 
 #### ShopRenter Frontend API
 - [ShopRenter.js](frontend-api/SHOPRENTERJS_API.md)
