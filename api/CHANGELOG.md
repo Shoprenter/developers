@@ -4,13 +4,13 @@
 - Customer és Customer Extend resource-khoz elkészült egy **updatedAtMin** filter, ami a megadott dátum után módosított 
 vásárlókat adja vissza. [dokumentáció](https://www.shoprenter.hu/api/doc#customer_extend)
 
-#### 2019.06.25.
-- **API batch feldolgozó**nál memória optimalizálás történt, hogy egyszerre több request-et is tudjon kezelni. 
-[dokumentáció](BATCH_API.md)
-
 #### 2019.06.23. 
 - **Product Extend** resource-ba belekerült a **manufacturer** kibontva, hogy ne kelljen újabb lekérés hozzá 
-[dokumentáció](https://www.shoprenter.hu/api/doc#product_extend)
+[dokumentáció](https://www.shoprenter.hu/api/doc#product_extend)    
+
+#### 2019.06.21.
+- **API batch feldolgozó**nál memória optimalizálás történt, hogy egyszerre több request-et is tudjon kezelni. 
+[dokumentáció](BATCH_API.md)
 
 #### 2019.05.30.
 - Order resource-ba bekerült az **originalPrice** mező [dokumentáció](https://www.shoprenter.hu/api/doc#order)
