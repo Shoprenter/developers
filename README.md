@@ -11,6 +11,7 @@
 - [API batch feldolgozó](api/BATCH_API.md)
 - [API Outer ID használata](api/API_OUTER_ID.md)
 - [Kiterjesztett Resourceok (Extend Resource)](api/EXTEND_RESOURCE.md)
+- [Setting Resource értékeinek jelentése](api/SETTING_RESOURCE.md)
 - [www.shoprenter.hu/api/doc](https://www.shoprenter.hu/api/doc)
 
 #### ShopRenter Frontend API
