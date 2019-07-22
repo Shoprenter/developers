@@ -1,14 +1,5 @@
-#Setting Resource értékeinek jelentése
+# Setting Resource értékeinek jelentése
 
-A Setting Resource lekérdezésével a bolt adminisztrációs felületén megadott fontosabb bolt beállításokat tudjuk lekérdezni.
- - Beállítások -> Bolt beállítások -> Általános beállítások
- - Beállítások -> Bolt beállítások -> Árak, Árkerekítés, Pénznem
- - Beállítások -> Bolt beállítások -> Kosár és Pénztár beállítások
- - Beállítások -> Bolt beállítások -> Belépés és Regisztráció beállítások
- - Beállítások -> Termék beállítások -> Működési beállítások
- - Beállítások -> Megjelenés -> Modulok beállítása
- - Beállítások -> Megjelenés -> Megjelenés beállítások
- - Beállítások -> SEO & analitika beállítások
 
 Az alábbi táblázatban a Setting Resource által visszaadott kulcsok jelentései találhatók.
 
