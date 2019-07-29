@@ -1,6 +1,6 @@
 # A full paraméter
 
-A Resourceokból való lekérdezés során visszatérő feladat, hogy a visszakapott linklista feldolgozásához további API hívást kell intézni, azért hogy visszakapjuk a Resource-hoz tartozó adatokat.
+A Resource-okból való lekérdezés során visszatérő feladat, hogy a visszakapott link-lista feldolgozásához további API hívást kell intézni, azért hogy visszakapjuk a Resource-hoz tartozó adatokat.
 
 **Például:**
 
@@ -29,7 +29,7 @@ a terméklista lekérdezése során az alábbi eredménnyel találkozhatunk:
 ```
 
 A kevesebb API hívások érdekében minden Resource GET-es hívás esetén rendelkezik egy **full** nevű paraméterrel. 
-A `full=1` paraméter alkalmazásával a link lista helyett a meghívott linkek tartalma jelenik meg.
+A `full=1` paraméter alkalmazásával a link-lista helyett a meghívott linkek tartalma jelenik meg.
 
 - **method:** GET
 - **url:** http://shopname.api.shoprenter.hu/products?full=1
