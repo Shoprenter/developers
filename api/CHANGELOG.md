@@ -1,5 +1,8 @@
 # API changelog
 
+#### 2019.08.06
+- A Product és Product Extend resource-ban elérhető lett az **allImages** property, mely az adott terméhez tartozó fő termékkép (mainImage) és a hozzá tartozó további képek (image1, image2,...) **teljes** url elérését tartalmazza, cache-elt formában.
+
 #### 2019.07.05.
 - Customer és Customer Extend resource-khoz elkészült egy **updatedAtMin** filter, ami a megadott dátum után módosított 
 vásárlókat adja vissza. [dokumentáció](https://www.shoprenter.hu/api/doc#customer_extend)
