@@ -16,69 +16,86 @@ Batch kérés esetén az **ajánlott request szám 1000** legyen.
 
 Egy post mérete *(max_post_size)* **32MB** lehet. Érdemes figyelni kép feltöltés esetén, hogy ezt ne lépjük túl.
 
+**A lenti példákat szemléltetésképp mutatjuk be, ezért nem tartalmazzák az egész API request-et és response-t!**
+
 ## API kérés
+
+<table>
+  <tr>
+    <td><b>method:</b></td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td><b>url:</b></td>
+    <td>http://shopname.api.shoprenter.hu/batch</td>
+  </tr>
+  <tr>
+    <td><b>headers:</b></td>
+    <td>
+        Accept:application/json<br>
+        Content-Type:application/json
+    </td>
+  </tr>
+</table>
 
 A API kérés a következő struktúrát kell hogy kövesse:
 
-```
-array(
-    'requests' => array(
-        0 => array(
-            'method' => ...,
-            'uri' => ...,
-        ),
-        1 => array(
-            'method' => ...,
-            'uri' => ...,
-            'data' => array(...)
-        ),
-        ...
-    )
-)
+```json
+{
+  "data": {
+    "requests": [
+      {
+        "method": "GET",
+        "uri": "http://shopname.api.shoprenter.hu/productExtend?full=1&limit=200&page=0"
+      },
+      {
+        "method": "POST",
+        "uri": "http://shopname.api.shoprenter.hu/products/[ID]"
+      }
+    ]
+  }
+}
 ```
 
 - **method:** GET, POST, PUT, DELETE
 - **uri:** A resource-okhoz kapcsolódó API URI
-- **data:** POST vagy PUT esetén az adatokat tartalmazó tömb
+- **data:** POST vagy PUT esetén az adatokat tartalmazó objektum
 
 ## API válasz
 
-```
-<requests>
-    <request>
-        <method>GET</method>
-        <uri>...</uri>
-        <response>
-            <header>
-                <statusCode>...</statusCode>
-            </header>
-            <body>
-                ...
-            </body>
-        <response>
-    </request>
-    <request>
-        ...
-    </request>
-    ...
-</requests>
+```json
+{
+  "requests": {
+    "request": [
+      {
+        "method": "GET",
+        "uri": "http://shopname.api.shoprenter.hu/productExtend?full=1&limit=200&page=0",
+        "response": {
+          "header": { "statusCode": "200" },
+          "body": {}
+        }
+      },
+      {
+        "method": "POST",
+        "uri": "http://shopname.api.shoprenter.hu/products/[ID]",
+        "response": {
+          "header": { "statusCode": "200" },
+          "body": {}
+        }
+      }
+    ]
+  }
+}
 ```
 
 - **statusCode:** HTTP státusz kódja. Ha rendben volt a kérés kiszolgálása, ennek az értéke 200, 201 vagy 204 egyébként a hibára utaló státuszkód
 - **body:** a választ tartalmazza, hiba esetén a hiba szöveges üzenete
 
-**Az API batch url technikai okok miatt minden esetben 200-as státuszkóddal tér vissza, így a batch requestekben szereplő statusCode-okat a kliens alkalmazásban kell vizsgálni.**
+**Bármilyen error keletkezik a batch API-n belüli kérésekben, technikai okok miatt, minden esetben 200-as státuszkóddal tér vissza, így a batch requestekben szereplő statusCode-okat a kliens alkalmazásban kell vizsgálni.**
 
 [További gyakorlati példák a tömeges küldés használatára.](http://www.shoprenter.hu/images/batch.txt)
 
 ## Gyakori problémák
 
-1. **Üres válasz (<\/response>), vagy "Data parameter not found in POST/PUT!" hibaüzenet 400-as státusz kóddal:**<br>
-Értelemszerűen nem található **data** paraméter a küldött tömbben. Ilyen formában küldjük el az adatok a /batch-re:
-
-```
-data[requests][0][method]=GET
-data[requests][0][uri]=http://shopname.api.shoprenter.hu/products
-data[requests][1][method]=GET
-data[requests][1][uri]=http://shopname.api.shoprenter.hu/orders
-```
+1. **Üres válasz, vagy "Data parameter not found in POST/PUT!" hibaüzenet 400-as státusz kóddal:**<br>
+Értelemszerűen nem található **data** paraméter a küldött tömbben.

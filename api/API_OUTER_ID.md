@@ -4,6 +4,8 @@ Felmerült az igény, hogy egyes ügyfeleink saját egyedi azonosítókkal (OUTE
 
 Az OuterID használatát csak batch kérés esetén javasoljuk, hogy a batch kérés ideéig lehetséges legyen hivatkozni egy adott resource-ra. Kliens oldali tárolását nem javasoljuk, mert egyrészt felülírható, így más integráció felülírhatja, másrészt az OuterID nem törlődik az adott resource törlése esetén. Ezért a kérések alkalmával félrevezető lehet hogy nem létező resource-ra érkezik módosítás, ami hibára fut vagy más resource-ra fog mutatni az OuterID mint amihez eredetileg fel lett véve. A fentiek miatt csak batch kérés esetén javasoljuk a használatát és az egyes batch kérések alkalmával egyedi OuterID használata javallott.
 
+**A lenti példákat szemléltetésképp mutatjuk be, ezért nem tartalmazzák az egész API request-et és response-t!**
+
 ## Resource létrehozásakor
 
 ### POST
@@ -12,18 +14,35 @@ POST esetén, ha nem adunk meg ID-t, akkor a rendszer létrehoz egyet és ezt ad
 
 Például OUTER_ID használata nélkül egy termékhívás:
 
-```
-Array
-(
-    [sku] => SKU-11
-    [modelNumber] => 0
-    [orderable] => 1
-    [price] => 139900.0000
-    [multiplier] => 1.0000
-    [multiplierLock] => 0
-    [loyaltyPoints] => 
-...
-)
+<table>
+  <tr>
+    <td><b>method:</b></td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td><b>url:</b></td>
+    <td>http://shopname.api.shoprenter.hu/products</td>
+  </tr>
+  <tr>
+    <td><b>headers:</b></td>
+    <td>
+        Accept:application/json<br>
+        Content-Type:application/json
+    </td>
+  </tr>
+</table>
+
+```json
+{
+  "data": {
+    "sku": "SKU-11",
+    "modelNumber": 0,
+    "orderable": 1,
+    "price": 139900.0000,
+    "multiplier": 1.0000,
+    "multiplierLock": 0
+  }
+}
 ```
 
 **Válasz:**
@@ -32,39 +51,48 @@ Array
 HTTP STATUS CODE: 200 vagy 201
 ```
 
-```
-<response>
-    <href>
-        <![CDATA[http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTI0NTE=]]>
-    </href>
-    <id>
-        <![CDATA[cHJvZHVjdC1wcm9kdWN0X2lkPTI0NTE=]]>
-    </id>
-    <innerId>
-        <![CDATA[1]]>
-    </innerId>
-    <sku>
-        <![CDATA[SKU-11]]>
-    </sku>
-    ...
-</response>
+```json
+{
+  "response": {
+    "href": "http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTI0NTE=",
+    "id": "cHJvZHVjdC1wcm9kdWN0X2lkPTI0NTE=",
+    "innerId": "1",
+    "sku": "SKU-11"
+  }
+}
 ```
 
 OUTER_ID használatával:
 
-```
-uri => http://shopname.api.shoprenter.hu/products/SKU-11
-data => Array
-(
-    [sku] => SKU-11
-    [modelNumber] => 0
-    [orderable] => 1
-    [price] => 139900.0000
-    [multiplier] => 1.0000
-    [multiplierLock] => 0
-    [loyaltyPoints] => 
-...
-)
+<table>
+  <tr>
+    <td><b>method:</b></td>
+    <td>POST</td>
+  </tr>
+  <tr>
+    <td><b>url:</b></td>
+    <td>http://shopname.api.shoprenter.hu/products/SKU-11</td>
+  </tr>
+  <tr>
+    <td><b>headers:</b></td>
+    <td>
+        Accept:application/json<br>
+        Content-Type:application/json
+    </td>
+  </tr>
+</table>
+
+```json
+{
+  "data": {
+    "sku": "SKU-11",
+    "modelNumber": 0,
+    "orderable": 1,
+    "price": 139900.0000,
+    "multiplier": 1.0000,
+    "multiplierLock": 0
+  }
+}
 ```
 
 **Válasz:**
@@ -73,22 +101,15 @@ data => Array
 HTTP STATUS CODE: 200 vagy 201
 ```
 
-```
-<response>
-    <href>
-        <![CDATA[http://shopname.api.shoprenter.hu/products/SKU-11]]>
-    </href>
-    <innerId>
-        <![CDATA[1]]>
-    </innerId>
-    <id>
-        <![CDATA[SKU-11]]>
-    </id>
-    <sku>
-        <![CDATA[SKU-11]]>
-    </sku>
-    ...
-</response>
+```json
+{
+  "response": {
+    "href": "http://shopname.api.shoprenter.hu/products/SKU-11",
+    "innerId": "1",
+    "id": "SKU-11",
+    "sku": "SKU-11"
+  }
+}
 ```
 
 ### PUT
@@ -107,37 +128,20 @@ Törlés esetén ha létezik a resource-hoz OUTER_ID, azt töröljük vele egyet
 
 Amennyiben már egy létező resource-ot szeretnénk ellátni OUTER_ID-val vagy éppen a meglévőt szeretnénk módosítani, ezentúl erre is biztosítunk lehetőséget. Minden resource tartalmaz egy id property-t, amely az OUTER_ID amennyiben létezik, ha nem akkor pedig az általunk generált API_ID, példa egy resource-ra:
 
-```
-<response>
-    <href>
-        <![CDATA[http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTk2]]>
-    </href>
-    <id>
-        <![CDATA[cHJvZHVjdC1wcm9kdWN0X2lkPTk2]]>
-    </id>
-    <innerId>
-        <![CDATA[96]]>
-    </innerId>
-    <sku>
-        <![CDATA[BI-NAT004HU30]]>
-    </sku>
-    <price>
-        <![CDATA[2759]]>
-    </price>
-    <stock1>
-        <![CDATA[10]]>
-    </stock1>
-    <stock2>
-        <![CDATA[20]]>
-    </stock2>
-    <stock3>
-        <![CDATA[0]]>
-    </stock3>
-    <stock4>
-        <![CDATA[0]]>
-    </stock4>
-    ...
-</response>
+```json
+{
+  "response": {
+    "href": "http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTk2",
+    "id": "cHJvZHVjdC1wcm9kdWN0X2lkPTk2",
+    "innerId": "96",
+    "sku": "BI-NAT004HU30",
+    "price": "2759",
+    "stock1": "10",
+    "stock2": "20",
+    "stock3": "0",
+    "stock4": "0"
+  }
+}
 ```
 
 ### POST/PUT
@@ -146,41 +150,47 @@ POST és PUT kérés esetén egyszerűen a küldött adatokban szerepelni kell a
 
 Példa egy POST/PUT kérésre:
 
-```
-uri => http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTk2
-data => Array
-(
-    [id] => TesztOuterID
-    [price] => 2760
-    [stock1] => 12
-...
-)
+<table>
+  <tr>
+    <td><b>method:</b></td>
+    <td>POST/PUT</td>
+  </tr>
+  <tr>
+    <td><b>url:</b></td>
+    <td>http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTk2</td>
+  </tr>
+  <tr>
+    <td><b>headers:</b></td>
+    <td>
+        Accept:application/json<br>
+        Content-Type:application/json
+    </td>
+  </tr>
+</table>
+
+```json
+{
+  "data": {
+    "id": "TesztOuterID",
+    "price": 2760,
+    "stock1": 12
+  }
+}
 ```
 
 Ebben az esetben az id property-ként elküldtük a TesztOuterID-t. Így az adott resource megkapja az OUTER_ID-nak. Tehát az API válaszban már az id property az újonnan beálított OUTER_ID lesz. Továbbá az adott resource elérése is megváltozik.
 
-```
-<response>
-    <href>
-        <![CDATA[http://shopname.api.shoprenter.hu/products/TesztOuterID]]>
-    </href>
-    <id>
-        <![CDATA[TesztOuterID]]>
-    </id>
-    <innerId>
-        <![CDATA[96]]>
-    </innerId>
-    <sku>
-        <![CDATA[BI-NAT004HU30]]>
-    </sku>
-    <price>
-        <![CDATA[2760]]>
-    </price>
-    <stock1>
-        <![CDATA[12]]>
-    </stock1>
-    ...
-</response>
+```json
+{
+  "response": {
+    "href": "http://shopname.api.shoprenter.hu/products/TesztOuterID",
+    "id": "TesztOuterID",
+    "innerId": "96",
+    "sku": "BI-NAT004HU30",
+    "price": "2760",
+    "stock1": "12"
+  }
+}
 ```
 
 ### GET
