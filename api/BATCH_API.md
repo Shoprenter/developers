@@ -50,7 +50,8 @@ A API kérés a következő struktúrát kell hogy kövesse:
       },
       {
         "method": "POST",
-        "uri": "http://shopname.api.shoprenter.hu/products/[ID]"
+        "uri": "http://shopname.api.shoprenter.hu/products/[ID]",
+        "data": {}
       }
     ]
   }
