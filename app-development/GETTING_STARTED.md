@@ -7,7 +7,7 @@ Az alkalmazás beregisztrálásához szükséges adatokat kérjük elküldeni a 
 **Az alkalmazás tulaja adja.**
 - **Alkalmazás neve:** ez fog megjelenni a telepíthető alkalmazások listájába.
 - **EntryPoint:** Az alkalmazás belépési pontja. Az alkalmazás fejlesztője adja. HTTPS-protokollon keresztül elérhetőnek kell lennie.
-- **RedirectUri:** Az alkalmazás authentikációs belépési pontja ezen az url-en keresztül fogja az authentikációs adatokat igényelni az adott ShopRenter-es bolt API-jához. HTTPS protokollon keresztül elérhetőnek kell lennie.
+- **RedirectUri:** Az alkalmazás authentikációs belépési pontja ezen az url-en keresztül fogja az authentikációs adatokat igényelni az adott ShopRenter-es bolt API-jához. HTTPS protokollon keresztül elérhetőnek kell lennie. **Figyelem!** Ha pl. single-page application lesz a kliens, ahol URL resource azonosítóval van megadva egy-egy route (https://example.com/shoprenter#redirect), azt technikai okokból, nem tudjuk elfogadni.
 - **UninstallUri:** Az alkalmazás törlése után egy GET kérés lesz elküldve erre az URL-re, hogy az alkalmazás még egy utolsó műveletet tudjon végrehajtani. (Megjegyzés: QueryString-ben hozzá lesznek fűzve a következő adatok: shopname, code, timestamp, hmac.)
 - **Alkalmazás logo:** az alkalmazás listában megjelenő logó kép (**250x150px**).
 - **Alkalmazás rövid leírása:** Maximum 70 karakteres rövid szöveg.
