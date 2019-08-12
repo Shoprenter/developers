@@ -10,8 +10,8 @@ Ez a legelső lépés, amit el szoktak rontani az API-ra történő fejlesztésn
 
 Ez helyzetfüggő, ha konkrétan tudod, mire akarsz rákérdezni az API-ból, akkor már legalább egy resource ID-d van. A termékeknél például van lehetőség **_sku_** szerint lekérdezni. Még egy lehetőség az Outer ID használata. Arról, hogy hogyan tudsz kereső paramétereket használni egy adott resource-nál vagy hogyan lehet létrehozni Outer ID-kat, a dokumentációban olvashatsz bővebben:
 
-https://www.shoprenter.hu/api/doc#product
-https://support.shoprenter.hu/hc/hu/articles/215106158-ShopRenter-API#outerid
+- https://www.shoprenter.hu/api/doc#product
+- https://github.com/Shoprenter/developers/blob/master/api/API_OUTER_ID.md
 
 ---
 
