@@ -1,5 +1,8 @@
 # API changelog
 
+#### 2019.08.08
+- Bekerült a **Json-alapú** kommunikáció az API-val. Emellett az API dokumentáció ki lett bővítve **Json** formátumú példákkal. [dokumentáció](https://www.shoprenter.hu/api/doc#address)
+
 #### 2019.08.06
 - A Product és Product Extend resource-ban elérhető lett az **allImages** property, mely az adott terméhez tartozó fő termékkép (mainImage) és a hozzá tartozó további képek (image1, image2,...) **teljes** url elérését tartalmazza, cache-elt formában.
 
