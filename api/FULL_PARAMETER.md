@@ -26,16 +26,14 @@ a terméklista lekérdezése során az alábbi eredménnyel találkozhatunk:
 ```json
 {
   "response": {
-    "items": {
-      "item": [
-        {
-          "href": "http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTQ5"
-        },
-        {
-          "href": "http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTUw"
-        }
-      ]
-    }
+    "items": [
+      {
+        "href": "http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTQ5"
+      },
+      {
+        "href": "http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTUw"
+      }
+    ]
   }
 }
 ```
@@ -61,22 +59,20 @@ A `full=1` paraméter alkalmazásával a link-lista helyett a meghívott linkek 
 ```json
 {
   "response": {
-    "items": {
-      "item": [
-        {
-          "href": "http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTQ5",
-          "id": "cHJvZHVjdC1wcm9kdWN0X2lkPTQ5",
-          "innerId": "49",
-          "sku": "9789639884328"
-        },
-        {
-          "href": "http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTQ5",
-          "id": "cHJvZHVjdC1wcm9kdWN0X2lkPTQ5",
-          "innerId": "49",
-          "sku": "9789639884328"
-        }
-      ]
-    }
+    "items": [
+      {
+        "href": "http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTQ5",
+        "id": "cHJvZHVjdC1wcm9kdWN0X2lkPTQ5",
+        "innerId": "49",
+        "sku": "9789639884328"
+      },
+      {
+        "href": "http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTQ5",
+        "id": "cHJvZHVjdC1wcm9kdWN0X2lkPTQ5",
+        "innerId": "49",
+        "sku": "9789639884328"
+      }
+    ]
   }
 }
 ```
