@@ -270,111 +270,186 @@ Példa:
 ```
 
 ### onCartUpdate
-A kosár módosítása (termék hozzáadás, darabszám). Megkapja a kosárba helyezett termék adatait.
+A kosár módosításakor (termék hozzáadásakor/törlésekor/módosításakor) végbemenő eseményre lehet feliratkozni. A feliratkozott eventlistener paraméterben megkapja a módosított kosár adatait.
 
 Példa:
 ```json
 {
     "detail": {
-        "cartToken": "27828acb2141b0b16bbfc14358b0cbcd1d26aee0860c5",
-        "products": [
-            {
-                "productId": "379",
-                "isPresent": "",
-                "cartKey": "S7QytqrOtDKwzrQyNrcEkoZAbATGiVaGVtXFVuZWSvkFJZn5ecVKQCEDq+ra2loA",
-                "name": "Utcai cipő, Adidas Cireo Mid",
-                "safeName": "Utcai cipő, Adidas Cireo Mid",
-                "option": [],
-                "quantity": "2",
-                "quantityName": "db",
-                "image": "https://demo.shoprenter.hu/custom/demo/image/cache/w60h60/product/adidas-ciero-mid-blue-pink-black.jpg?lastmod=-62169987600.1521455705",
-                "stock": "1",
-                "price": "19.685 Ft",
-                "priceWithoutCurrency": "19685.00",
-                "href": "https://demo.shoprenter.hu/utcai-cipo-adidas-cireo-mid-379",
-                "values": [],
-                "valueDisplay": "",
-                "currency": "HUF",
-            },
-            {
-                "productId": "307",
-                "isPresent": "",
-                "cartKey": "S7QytqrOtDKwzrQyNjAHkoZQbGSdaGVoVV1sZW6llF9QkpmfV6wEFDKwqq6trQUA",
-                "name": "Kensington ValuCase One",
-                "safeName": "Kensington ValuCase One",
-                "option": [],
-                "quantity": "1",
-                "quantityName": "db",
-                "image": "https://demo.shoprenter.hu/custom/demo/image/cache/w60h60/product/UM07-05-0080n.jpg?lastmod=-62169987600.1521455705",
-                "stock": "1",
-                "price": "6.756 Ft",
-                "priceWithoutCurrency": "6756.40",
-                "href": "https://demo.shoprenter.hu/kensington-valucase-one-307",
-                "values": {
-                    "2": {
-                        "attrId": "2",
-                        "attrLabel": "Szín",
-                        "postfix": "",
-                        "prefix": "",
-                        "rawValue": "4",
-                        "value": "Piros",
-                        "values": ["4"],
-                        "priority": "2",
-                        "valueDisplay": "<div>Piros</div>",
-                        "valueTextDisplay": "Piros",
-                        "valueIds": ["1","4","5","6","7","8","9"],
-                    },
-                    "3": {
-                        "attrId": "3",
-                        "attrLabel": "Méret",
-                        "postfix": "",
-                        "prefix": "",
-                        "rawValue": "1",
-                        "value": "M",
-                        "values": ["1"],
-                        "priority": "0",
-                        "valueDisplay": "M",
-                        "valueTextDisplay": "M",
-                        "valueIds":[],
-                    }
-                },
-                "valueDisplay": " <span class=\"paf_attrib_values\"><span class=\"paf_attrib\"><span class=\"paf_attrib_label\">Szín:</span> <span class=\"paf_attrib_value\">Piros</span></span><br/><span class=\"paf_attrib\"><span class=\"paf_attrib_label\">Méret:</span> <span class=\"paf_attrib_value\">M</span></span></span>",
-                "currency": "HUF",
-            }
-        ]
-    }
+                "cartToken": "27828acb2141b0b16bbfc14358b0cbcd1d26aee0860c5",
+                "products": [
+                  {
+                    "0": "",
+                    "productId": 318,
+                    "sku": "TTA1234",
+                    "minimumPlural": "0",
+                    "isPresent": false,
+                    "shippingTime": 1565965848,
+                    "isParentOrChild": false,
+                    "image": "",
+                    "cartKey": "S7QytqrOtDKwzrQyNrQAkoYgbAQkjKwTrQytqoutzK2U8gtKMvPzipWAQgZW1bW1tQA=",
+                    "download": [],
+                    "cartItemType": "Product",
+                    "name": "Teszt termék akcióhoz",
+                    "thumbWidth": "60",
+                    "thumbHeight": "60",
+                    "imageUrl": "https://demo.shoprenter.hu/custom/demo/image/cache/w60h60/no_image.jpg?lastmod=0.1560858478",
+                    "option": [],
+                    "quantity": 12,
+                    "quantityName": "db",
+                    "minimum": "1",
+                    "maximum": "0",
+                    "summedQuantity": 48,
+                    "step": 1,
+                    "stock": true,
+                    "priceNumber": 10000,
+                    "totalNumber": 120000,
+                    "totalOriginalNumber": 120000,
+                    "originalPriceNumber": 10000,
+                    "isSpecial": false,
+                    "href": "https://demo.shoprenter.hu/teszt_termek_akciohoz_318",
+                    "values": [],
+                    "displaySpecialPrice": false,
+                    "isModified": false,
+                    "customerMessage": null,
+                    "needToShip": true,
+                    "weight": 0,
+                    "weightClass": "kg",
+                    "isMaximumQuantityReached": false
+                  },
+                  {
+                    "0": "",
+                    "productId": 317,
+                    "sku": "TESZTOPC1234",
+                    "minimumPlural": "0",
+                    "isPresent": false,
+                    "shippingTime": 1565965848,
+                    "isParentOrChild": false,
+                    "image": "",
+                    "cartKey": "S7QytqrOtDKwzrQyNjQHkoZQbGSdaGVoVV1sZW6llF9QkpmfV6wEFDKwqq6trQUA",
+                    "download": [],
+                    "cartItemType": "Product",
+                    "name": "Teszt opciós termék",
+                    "thumbWidth": "60",
+                    "thumbHeight": "60",
+                    "imageUrl": "https://demo.shoprenter.hu/custom/demo/image/cache/w60h60/no_image.jpg?lastmod=0.1560858478",
+                    "option": [],
+                    "quantity": 1,
+                    "quantityName": "db",
+                    "minimum": "1",
+                    "maximum": "0",
+                    "summedQuantity": 1228,
+                    "step": 1,
+                    "stock": true,
+                    "priceNumber": 10000,
+                    "totalNumber": 10000,
+                    "totalOriginalNumber": 10000,
+                    "originalPriceNumber": 10000,
+                    "isSpecial": false,
+                    "href": "https://demo.shoprenter.hu/teszt_opcios_termek_317",
+                    "values": [],
+                    "displaySpecialPrice": false,
+                    "isModified": false,
+                    "customerMessage": null,
+                    "needToShip": true,
+                    "weight": 0,
+                    "weightClass": "kg",
+                    "isMaximumQuantityReached": false
+                  }
+                ]
+              }
 }
 ```
 
 ### onItemDelete
-A kosár modulból való termék törlése. Megkapja a kosárból törölt elem adatait.
+A kosárból való törlés eseményre lehet feliratkozni. A feliratkozott eventlistener paraméterben megkapja a törlés utáni kosár adatait.
 
 Példa:
 ```json
 {
     "detail": {
-        "cartToken": "27828acb2141b0b16bbfc14358b0cbcd1d26aee0860c5",
-        "products": [
-            {
-                "productId": "379",
-                "isPresent": "",
-                "cartKey": "S7QytqrOtDKwzrQyNrcEkoZAbATGiVaGVtXFVuZWSvkFJZn5ecVKQCEDq+ra2loA",
-                "name": "Utcai cipő, Adidas Cireo Mid",
-                "safeName": "Utcai cipő, Adidas Cireo Mid",
-                "option": [],
-                "quantity": "2",
-                "quantityName": "db",
-                "image": "https://demo.shoprenter.hu/custom/demo/image/cache/w60h60/product/adidas-ciero-mid-blue-pink-black.jpg?lastmod=-62169987600.1521455705",
-                "stock": "1",
-                "price": "19.685 Ft",
-                "priceWithoutCurrency": "19685.00",
-                "href": "https://demo.shoprenter.hu/utcai-cipo-adidas-cireo-mid-379",
-                "values": [],
-                "valueDisplay": "",
-                "currency": "HUF",
-            }
-        ]
-    }
+                "cartToken": "27828acb2141b0b16bbfc14358b0cbcd1d26aee0860c5",
+                "products": [
+                  {
+                    "0": "",
+                    "productId": 318,
+                    "sku": "TTA1234",
+                    "minimumPlural": "0",
+                    "isPresent": false,
+                    "shippingTime": 1565965848,
+                    "isParentOrChild": false,
+                    "image": "",
+                    "cartKey": "S7QytqrOtDKwzrQyNrQAkoYgbAQkjKwTrQytqoutzK2U8gtKMvPzipWAQgZW1bW1tQA=",
+                    "download": [],
+                    "cartItemType": "Product",
+                    "name": "Teszt termék akcióhoz",
+                    "thumbWidth": "60",
+                    "thumbHeight": "60",
+                    "imageUrl": "https://demo.shoprenter.hu/custom/demo/image/cache/w60h60/no_image.jpg?lastmod=0.1560858478",
+                    "option": [],
+                    "quantity": 12,
+                    "quantityName": "db",
+                    "minimum": "1",
+                    "maximum": "0",
+                    "summedQuantity": 48,
+                    "step": 1,
+                    "stock": true,
+                    "priceNumber": 10000,
+                    "totalNumber": 120000,
+                    "totalOriginalNumber": 120000,
+                    "originalPriceNumber": 10000,
+                    "isSpecial": false,
+                    "href": "https://demo.shoprenter.hu/teszt_termek_akciohoz_318",
+                    "values": [],
+                    "displaySpecialPrice": false,
+                    "isModified": false,
+                    "customerMessage": null,
+                    "needToShip": true,
+                    "weight": 0,
+                    "weightClass": "kg",
+                    "isMaximumQuantityReached": false
+                  },
+                  {
+                    "0": "",
+                    "productId": 317,
+                    "sku": "TESZTOPC1234",
+                    "minimumPlural": "0",
+                    "isPresent": false,
+                    "shippingTime": 1565965848,
+                    "isParentOrChild": false,
+                    "image": "",
+                    "cartKey": "S7QytqrOtDKwzrQyNjQHkoZQbGSdaGVoVV1sZW6llF9QkpmfV6wEFDKwqq6trQUA",
+                    "download": [],
+                    "cartItemType": "Product",
+                    "name": "Teszt opciós termék",
+                    "thumbWidth": "60",
+                    "thumbHeight": "60",
+                    "imageUrl": "https://demo.shoprenter.hu/custom/demo/image/cache/w60h60/no_image.jpg?lastmod=0.1560858478",
+                    "option": [],
+                    "quantity": 1,
+                    "quantityName": "db",
+                    "minimum": "1",
+                    "maximum": "0",
+                    "summedQuantity": 1228,
+                    "step": 1,
+                    "stock": true,
+                    "priceNumber": 10000,
+                    "totalNumber": 10000,
+                    "totalOriginalNumber": 10000,
+                    "originalPriceNumber": 10000,
+                    "isSpecial": false,
+                    "href": "https://demo.shoprenter.hu/teszt_opcios_termek_317",
+                    "values": [],
+                    "displaySpecialPrice": false,
+                    "isModified": false,
+                    "customerMessage": null,
+                    "needToShip": true,
+                    "weight": 0,
+                    "weightClass": "kg",
+                    "isMaximumQuantityReached": false
+                  }
+                ]
+              }
 }
 ```
 
