@@ -50,3 +50,7 @@ A post requestnek tarttalmaznia kell az alábbi mezőket:
 6. A kiszolgáló ha megkapta az authentikációs adatokat redirecttel a https://[refererDomain]/admin/app/[appId] url-re, ahol a refererDomain-t érdemes a request header-ből kiszedni, mivel a boltoknak egyedi domain neve is lehet.
 7. A ShopRenter egy Iframeben megnyitja az alkalmazáshoz tartozó EntryPoint-ot. A request tartalmazni fogja a 2. pontban írt paramétereket.
 8. Feltelepítés után a ShopRenter csak az Entrypointra küld kéréseket. Minden esetben a 2. pontban írt paraméterekkel.
+
+## Példa alkalmazások
+- [SR Demo app PHP](https://github.com/Shoprenter/sr-demo-app-php)
+- [SR Demo app Node.js](https://github.com/Shoprenter/sr-demo-app-node)
