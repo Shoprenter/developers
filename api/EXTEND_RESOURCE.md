@@ -43,3 +43,13 @@ Pl.: Ha az Product Extend resoruce-ra POST-ot küldünk, melyben a **manufacture
 Pl.: Ha az Product Extend resoruce-ra POST-ot küldünk, melyben a **manufacturer**-el kapcsolatos adatok találhatóak, de resource id nem, akkor a rendszer létrehozza az új gyártót, és a terméhez kapcsolja.
 
 3. Ha a OneToOne mezőhöz tartozó, elküldött adattömb resource id-t, mezőket és hozzá tartozó értékeket tartalmaz, úgy a resource id-hoz tartozó, létező resource egyedet próbálja a rendszer frissíteni, egyébként létrehozza azt.
+
+## ManyToMany kapcsolat
+
+Pl: egy földrajzi zónához több ország is tartozhat, illetve egy ország több földrajzi zónához is tartozhat.
+
+Jelenleg csak a GeoZone és Country resource között létezik ilyen kapcsolat. Csak GET-es egyedi és kollekció kéréseket tud fogadni.
+
+1. **GeoZone** resourceból kiindulva **GET** kérés esetén egy földrajzi zóna resource id-ját kell átadnunk pl: Európai Unió földrajzi zónáét. A válaszban az egyszerű propertyk mellett megtaláljuk a **countries** propertyben, hogy mely országok tartoznak hozzá. Jelen esetben pl: Magyarország, Ausztria... stb.
+
+2. **Country** resourceból kiindulva **GET** kérés esetén egy ország resource id-ját kell átadnunk pl: Magyarország. A válaszban az egyszerű propertyk mellett megkapjuk a **geoZones** propertyben, hogy mely földrajzi zónákban szerepel. Jelen esetben a Magyarország és az Európai Unió földrajzi zónákhoz.
