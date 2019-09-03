@@ -1,6 +1,6 @@
 # API changelog
 
-#### 2019.09.04
+#### 2019.09.03
 - Bekerült a GeoZone resource, amellyel le lehet kérdezni, hogy milyen földrajzi zónához milyen országok tartoznak. [dokumentáció](https://www.shoprenter.hu/api/doc#geo_zone)
 - A Country resource kiegészült a geoZones propertyvel, amellyel megkaphatjuk, hogy egy adott ország milyen földrajzi zónákhoz tartozik. [dokumentáció](https://www.shoprenter.hu/api/doc#country)
 - Az OrderProduct resource kiegészült további propertykkel, amellyel megkaphatjuk a rendelt termék szélességét (**width**), magasságát (**height**), hosszát (**length**) és súlyát (**weight**). [dokumentáció](https://www.shoprenter.hu/api/doc#order_product)
