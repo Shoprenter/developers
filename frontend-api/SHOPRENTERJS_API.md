@@ -34,7 +34,12 @@ Kimenet:
     userId: 0, 
     userGroupId: 8, 
     customerGroupTaxMode: "gross", 
-    customerGroupPriceMode: "gross_net_tax"
+    customerGroupPriceMode: "gross_net_tax",
+    email: "test@test.com",
+    name: {
+        firstName: "First name",
+        lastName: "Last name"
+    }
 }
 ```
 
@@ -69,9 +74,17 @@ Egyes mezők jelentése:
               <li><strong>only_gross</strong>: Csak a bruttó ár kiírása</li>
               <li><strong>gross_net_tax</strong>: Bruttó ár, mögötte zárójelben a nettó + ÁFA kiírása</li>
               <li><strong>only_net</strong>: Csak a nettó ár kiírása</li>
-              <li><strong>net_tax</strong>: A nettó ár és mögötte a + ÁFA kiírása/li>
+              <li><strong>net_tax</strong>: A nettó ár és mögötte a + ÁFA kiírása</li>
               <li><strong>net_tax_gross</strong>: A nettó ár és mögötte a + ÁFA kiírása, illetve zárójelben a bruttó ár kiírása</li>
         </td>
+    </tr>
+    <tr>
+        <td>email</td>
+        <td>A vevő e-mail címe</td>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>A name objektum tartalmazza a vevő vezeték, illetve keresztnevét</td>
     </tr>
 </table>
 
