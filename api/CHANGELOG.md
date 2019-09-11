@@ -1,5 +1,12 @@
 # API changelog
 
+#### 2019.09.10
+- Bekerült a Shipping Mode Extend resource, amellyel a szállítási módokkal kapcsolatos műveleteket lehet végrehajtani. [dokumentáció](https://www.shoprenter.hu/api/doc#shipping_mode_extend)
+- Bekerült a Shipping Mode Description resource, amellyel a szállítási módokkal kapcsolatos adatokat (név, leírás, nyelv) lehet kezelni. [dokumentáció](https://www.shoprenter.hu/api/doc#shipping_mode_description)
+- Bekerült a Shipping Lane resource, amellyel a szállítási módokkal kapcsolatos szállítási sávokat lehet kezelni. [dokumentáció](https://www.shoprenter.hu/api/doc#shipping_lane)
+- Order resource kiegészült egy shippingMode kereső paraméterrel és egy shippingMode propertyvel.[dokumentáció](https://www.shoprenter.hu/api/doc#order)
+- Order Extend resource kiegészült egy shippingMode kereső paraméterrel és egy shippingMode propertyvel.[dokumentáció](https://www.shoprenter.hu/api/doc#order_extend)
+
 #### 2019.09.03
 - Bekerült a GeoZone resource, amellyel le lehet kérdezni, hogy milyen földrajzi zónához milyen országok tartoznak. [dokumentáció](https://www.shoprenter.hu/api/doc#geo_zone)
 - A Country resource kiegészült a geoZones propertyvel, amellyel megkaphatjuk, hogy egy adott ország milyen földrajzi zónákhoz tartozik. [dokumentáció](https://www.shoprenter.hu/api/doc#country)
