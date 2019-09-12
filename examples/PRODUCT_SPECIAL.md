@@ -44,7 +44,7 @@ Response
 
 ```json
 {
-    "href": "http://demo.api.aurora.ballapeter/productSpecials/cHJvZHVjdFNwZWNpYWwtcHJvZHVjdF9zcGVjaWFsX2lkPTg4",
+    "href": "http://shopname.api.shoprenter.hu/productSpecials/cHJvZHVjdFNwZWNpYWwtcHJvZHVjdF9zcGVjaWFsX2lkPTg4",
     "id": "cHJvZHVjdFNwZWNpYWwtcHJvZHVjdF9zcGVjaWFsX2lkPTg4",
     "priority": "-1",
     "price": "1000.0000",
@@ -56,7 +56,7 @@ Response
     "type": "day_spec",
     "dayOfWeek": "4",
     "product": {
-        "href": "http://demo.api.aurora.ballapeter/products/cHJvZHVjdC1wcm9kdWN0X2lkPTE2OQ=="
+        "href": "http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTE2OQ=="
     },
     "customerGroup": null
 }
@@ -89,7 +89,7 @@ Response
 
 ```json
 {
-    "href": "http://demo.api.aurora.ballapeter/productSpecials/cHJvZHVjdFNwZWNpYWwtcHJvZHVjdF9zcGVjaWFsX2lkPTg4",
+    "href": "http://shopname.api.shoprenter.hu/productSpecials/cHJvZHVjdFNwZWNpYWwtcHJvZHVjdF9zcGVjaWFsX2lkPTg4",
     "id": "cHJvZHVjdFNwZWNpYWwtcHJvZHVjdF9zcGVjaWFsX2lkPTg4",
     "priority": "-1",
     "price": 900.0000,
@@ -101,7 +101,7 @@ Response
     "type": "day_spec",
     "dayOfWeek": 5,
     "product": {
-        "href": "http://demo.api.aurora.ballapeter/products/cHJvZHVjdC1wcm9kdWN0X2lkPTE2OQ=="
+        "href": "http://shopname.api.shoprenter.hu/products/cHJvZHVjdC1wcm9kdWN0X2lkPTE2OQ=="
     },
     "customerGroup": null
 }
