@@ -62,7 +62,7 @@ Response
 
 #### 3.lépés
 
-A Document resource id birtokában a [Document Description resource](https://www.shoprenter.hu/api/doc#document_description) segítségével beállíthatjuk a feltöltött dokumentum nevét és nyelvét. Megjegyzés: a **filename**-et és a **mask** -ot ajánlatos ugyanazt az értéket adni. A nyelvet a [Language resource](https://www.shoprenter.hu/api/doc#language) segítségével tudjuk lekérdezni.
+A Document resource id birtokában a [Document Description resource](https://www.shoprenter.hu/api/doc#document_description) segítségével beállíthatjuk a feltöltött dokumentum nevét és nyelvét. Megjegyzés: a **filename** és a **mask** értékének nem kell megegyezni. A nyelvet a [Language resource](https://www.shoprenter.hu/api/doc#language) segítségével tudjuk lekérdezni.
 
 Példa request:
 
