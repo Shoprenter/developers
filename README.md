@@ -14,6 +14,7 @@
 - [Setting Resource értékeinek jelentése](api/SETTING_RESOURCE.md)
 - [API changelog](api/CHANGELOG.md)
 - [www.shoprenter.hu/api/doc](https://www.shoprenter.hu/api/doc)
+- [Példák az API használatához](examples/EXAMPLES.md)
 
 #### ShopRenter Frontend API
 - [ShopRenter.js](frontend-api/SHOPRENTERJS_API.md)
