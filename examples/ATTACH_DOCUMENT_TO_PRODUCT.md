@@ -4,7 +4,7 @@ Az alábbi példában bemutatásra kerül, hogy miként lehet a ShopRenter API-n
 
 ## 1. lépés
 
-A [File resource](https://www.shoprenter.hu/api/doc#file) segítségével töltsük fel a kívánt dokumentumot (pl. egy pdf-et vagy egy képet). Fontos, hogy a request **body**-ban megadott **filePath** értékének adjuk meg a `srattached\/` mappát, illetve a **type** értéke mindenképp `image` legyen, mégha szöveges dokumentumról is van szó.
+A [File resource](https://www.shoprenter.hu/api/doc#file) segítségével töltsük fel a kívánt dokumentumot. Fontos, hogy a request **body**-ban megadott **filePath** értékének adjuk meg a `srattached\/` mappát, illetve a **type** értéke mindenképp `image` legyen, mégha szöveges dokumentumról is van szó.
 
 ### Példa
 
