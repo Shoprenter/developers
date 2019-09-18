@@ -13,6 +13,7 @@
 - [Kiterjesztett Resourceok (Extend Resource)](api/EXTEND_RESOURCE.md)
 - [Setting Resource értékeinek jelentése](api/SETTING_RESOURCE.md)
 - [API changelog](api/CHANGELOG.md)
+- [Példák az API használatához](examples/EXAMPLES.md)
 - [www.shoprenter.hu/api/doc](https://www.shoprenter.hu/api/doc)
 
 #### ShopRenter Frontend API
