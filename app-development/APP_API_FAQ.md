@@ -88,7 +88,7 @@ Az `-F` kapcsoló eleve `multipart/form-data`-ként küldi el az adatot, így ne
 ---
 
 #### Új szöveges tartalom (Information Extend resource) felvétele után a tartalomban megadott javascript nem fut le és még csak hibát sem jelez ki, mi lehet a gond? 
-Amennyiben a szöveges tartalom rendelkezik script taggel, úgy kötelező megadni a type='text/javascript' attribute-ot. Példa:
+Amennyiben a szöveges tartalom rendelkezik script taggel, úgy kötelező megadni a **type='text/javascript'** attribute-ot. Példa:
 
 ```js
 <script type='text/javascript'>
