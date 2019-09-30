@@ -7,7 +7,7 @@ Outer ID nélkül a batchben a kérésekre a válaszok csak együtt fognak vissz
 Ellenben ha **Outer ID**-val hozzuk létre a terméket, akkor ezzel később tudunk hivatkozni a leírás létrehozásánál, függetlenül attól, hogy tudnánk, mi lesz a tényleges belső resource azonosítója a létrehozni kívánt terméknek.
 Ez a megoldás még az egyszerűbb használatú [Resource Extend](EXTEND_RESOURCE.md) megjelenése előtt lesz használva, így amennyibe egy resource-nak van extendelt változata pl: [Product Extend](https://www.shoprenter.hu/api/doc#product_extend), úgy annak használatát javasoljuk az Outer ID-s batcheléssel szemben.
 
-Ezenfelül, ha mégis az Outer ID-s megoldást választjuk, akkor a kliens oldali tárolását nem javasoljuk, mert egyrészt felülírható, így más integráció felülírhatja, másrészt az Outer ID nem törlődik az adott resource törlése esetén.
+Ezenfelül, ha mégis az Outer ID-s megoldást választjuk, akkor a kliens oldali tárolását nem javasoljuk.
 
 **A lenti példákat szemléltetésképp mutatjuk be, ezért nem tartalmazzák az egész API request-et és response-t!**
 
