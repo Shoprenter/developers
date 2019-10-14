@@ -1,5 +1,18 @@
 # API changelog
 
+#### 2019.10.
+- A Product Extend resouce-on keresztül elérhetővé vált az egyedi tulajdonságok lekérésének egyszerűsített verziója, a Product Attribute Extend. Ez egy readOnly resource, tehát egyenlőre nem alkalmas módosításra. Cserébe egy kéréssel képest kapunk az egyes termékekhez beállított terméktulajdonságok tényleges adatairól, API kérések láncolata nélkül.
+https://www.shoprenter.hu/api/doc#product_attribute_extend
+
+- Elkészült a Payment Mode resource, mellyel a rendszerbe integrált fizetési módokat listázhatjuk ki. 
+
+#### 2019.10.14
+- Elérhetővé vált a szöveges tartalmak menedzseléséhez szükséges API végpont Information Extend néven.
+https://www.shoprenter.hu/api/doc#information_extend
+
+#### 2019.09.23
+- Sok problémát okozott Ügyfeleinknek az egyes fő resoruce-ok (Product, Order, Category stb.) törlése esetén, hogy bár a rájuk küldött DELETE kérések esetén, a hozzájuk tartozó Outer-id megfelelelően törlődött, viszont, ha volt kapcsolódó resource-a, pl. egy termék esetén a termék leírások, és ehhez is tartozott külön Outer-id, ez sajnos nem törlődött automatikusan. Ezt oldottuk meg, így most már nem kell tartani attól, hogy később név ütközésbe futnak bele a fejlesztők, outer-id felvételekor.
+
 #### 2019.09.10
 - Bekerült a Shipping Mode Extend resource, amellyel a szállítási módokkal kapcsolatos műveleteket lehet végrehajtani. [dokumentáció](https://www.shoprenter.hu/api/doc#shipping_mode_extend)
 - Bekerült a Shipping Mode Description resource, amellyel a szállítási módokkal kapcsolatos adatokat (név, leírás, nyelv) lehet kezelni. [dokumentáció](https://www.shoprenter.hu/api/doc#shipping_mode_description)
