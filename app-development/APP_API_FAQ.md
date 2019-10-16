@@ -84,3 +84,14 @@ https://www.shoprenter.hu/api/doc#webhook
 `-F` kapcsolóval küldöm a POST adatokat, de `40014 - 'POST is either empty or content length exceeds the limit of %s bytes'` hibát kapom.
 Az `-F` kapcsoló eleve `multipart/form-data`-ként küldi el az adatot, így nem kell a 'content-type' header-t mellékelned.
 (Bővebben erről: https://ec.haxx.se/http-postvspost.html)
+
+---
+
+#### Új szöveges tartalom (Information Extend resource) felvétele után a tartalomban megadott javascript nem fut le és még csak hibát sem jelez ki, mi lehet a gond? 
+Amennyiben a szöveges tartalom rendelkezik script taggel, úgy kötelező megadni a **type="text/javascript"** attribute-ot. Példa:
+
+```js
+<script type="text/javascript">
+console.log('OK');
+</script>
+```
