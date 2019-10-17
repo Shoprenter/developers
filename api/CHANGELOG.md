@@ -1,5 +1,8 @@
 # API changelog
 
+#### 2019.10.17.
+- Setting resource kiegészült a bolt üzemeltetőjének címével (**config_address**) és telefonszámával (**config_telephone**). [dokumentáció](SETTING_RESOURCE.md)
+
 #### 2019.10.14
 - Elérhetővé vált a szöveges tartalmak menedzseléséhez szükséges API végpont Information Extend néven. [dokumentáció](https://www.shoprenter.hu/api/doc#information_extend)
 

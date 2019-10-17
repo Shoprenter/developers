@@ -23,6 +23,8 @@ Az alábbi táblázatban az API által visszaadott kulcsok jelentései találhat
 |stock_countdown_limit|A raktárkészlet ettől a darabszámtól kisebb értékek esetén jelenik meg|
 |stock_countdown_force|A raktárkészlet visszaszámláló megjelenítődik a raktárállapottól függetlenül. Aktiválva a visszaszámlálás akkor is megjelenik, ha készlet kijelzés megjelenítése a termékoldalon, a listázó oldalakon vagy a modulokban nemre van állítva. Értékei:<br>0 - Nem<br>1 - Igen|
 |config_owner|A bolt üzemeltetőjének a neve|
+|config_telephone|A bolt üzemeltetőjének a telefonszáma|
+|config_address|A bolt üzemeltetőjének a címe|
 |config_email|Kapcsolati e-mail cím, ahová a kapcsolat menüpontban megírt üzenetek fognak érkezni|
 |config_language|A bolt nyelvének ISO kódja pl: hu|
 |config_currency|A bolt által használt pénznem pl: HUF|
