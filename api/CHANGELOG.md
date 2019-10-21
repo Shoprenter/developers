@@ -1,5 +1,8 @@
 # API changelog
 
+#### 2019.10.21.
+- A **ProductExtend** resource-ba bekerült egy új property, a "**productAttributeExtend**" nevű lista, ami tartalmazza a termékhez tartozó tulajdonságokat. Fontos megjegyezni, hogy ez jelenleg csak readonly, tehát nem lehet küldeni rá POST adatokat. [dokumentáció](https://www.shoprenter.hu/api/doc#product_extend)
+
 #### 2019.10.17.
 - Setting resource kiegészült a bolt üzemeltetőjének címével (**config_address**) és telefonszámával (**config_telephone**). [dokumentáció](SETTING_RESOURCE.md)
 
