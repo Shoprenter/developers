@@ -4,7 +4,7 @@
 
 Az alkalmazás beregisztrálásához szükséges adatokat kérjük elküldeni a partnersupport@shoprenter.hu email címre.
 
-**Az alkalmazás tulaja adja.**
+**Az alkalmazás tulajának a következő adatokat kell biztosítania.**
 - **Alkalmazás neve:** ez fog megjelenni a telepíthető alkalmazások listájába.
 - **EntryPoint:** Az alkalmazás belépési pontja. Az alkalmazás fejlesztője adja. HTTPS-protokollon keresztül elérhetőnek kell lennie.
 - **RedirectUri:** Az alkalmazás authentikációs belépési pontja ezen az url-en keresztül fogja az authentikációs adatokat igényelni az adott ShopRenter-es bolt API-jához. HTTPS protokollon keresztül elérhetőnek kell lennie. **Figyelem!** Ha pl. single-page application lesz a kliens, ahol URL resource azonosítóval van megadva egy-egy route (https://example.com/shoprenter#redirect), azt technikai okokból, nem tudjuk elfogadni.
@@ -15,10 +15,11 @@ Az alkalmazás beregisztrálásához szükséges adatokat kérjük elküldeni a 
 - **Alakalmazás típusa:** Az alkalmazás lehet admin felületbe ágyazott vagy átírányításos. Beágyazásnál az apphoz tartozó, ShopRenter adminonos url-jére érkezve, az entry point-nak megadott url-t hívjuk be egy iframe-be. Átírányításnál pedig szimplán átírányítunk az entry pointra.
 - **A tesztbolt neve:** Az alkalmazás fejelsztése elején igényelni kell a shoprenter.hu oldalon egy próbaboltot. Itt megadható a boltnév, amit a bolt domainja első részeben - <bolt_nev>.shoprenter.hu - lesz látható.
 
-**ShopRenter adja.**
+**Az alkalmazás rendszerbe való felvétele után a következő adatokat a ShopRenter küldi el:**
 - **AppId:** alkalmazás azonosítója a ShopRenteren belül. 
 - **ClientId:** alkalmazás azonosító.
 - **ClientSecret:** Kulcs a kérések azonosításához.
+- **App URL:** Az alkalmazás ShopRenter-es URL-e.
 
 ### Alkalmazás telepítésének menete:
 1. A felhasználó az alkalmazás telepítésére kattint a ShopRenter admin felületén.
