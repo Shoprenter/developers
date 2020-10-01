@@ -48,7 +48,16 @@ A post requestnek tarttalmaznia kell az alábbi mezőket:
     - Ha a hitelesítési idő meghaladja a 30 másodpercet, akkor **{"message":"Authorization time expired","code":408}** választ fog adni.
     - Ha a telepítés közben hiba merült fel, akkor  **{"message":"App is not installed","code":409}** választ fog adni.
 5. Amennyiben a ShopRenter megfelelőnek találja a POST requestet egy username, password párossal fog válaszolni amivel az Alkalmazás hozzáfér az adott bolt API-jához. A 2. lépésben indított ShopRenteres kérésben lévő timestamp arra szolgál, hogy megvizsgáljuk, a kliens alkalmazás **30 másodpercen belül** megkezdi-e a API hozzáférés kérését!
-6. A kiszolgáló, ha megkapta az authentikációs adatokat, redirecttel a https://[primaryDomain]/admin/app/[appId] url-re, ahol a primaryDomain-t a [Domain Resource](https://doc.shoprenter.hu/api/domain.html#tulajdonsagok)-ból lehet lekérdezni. Ez azért fontos, mert a boltoknak egyedi domain neve is lehet!
+6. Az alkalmazás, ha megkapta az authentikációs adatokat, redirecttel a https://[primaryDomain]/admin/app/[appId] url-re, ahol a primaryDomain-t a [Domain Resource](https://doc.shoprenter.hu/api/domain.html#tulajdonsagok)-ból lehet lekérdezni. Ez azért fontos, mert a boltoknak egyedi domain neve is lehet!
+
+    **Megjegyzés:** Van lehetőség az app Shoprenteres url-jére való redirect alkalmával tetszőleges query paramétereket küldeni. Ezek a paraméterek az entryPoint       URL-jében jelennek meg, az authentikációhoz használt (shopname, code, timestamp, hmac) paramétereken felül.
+
+    Példa: 
+    Legyen az EntryPoint: https://demoapp.com/entryPoint
+    Erre redirecttel az alkalmazás: https://[primaryDomain]/admin/app/[appId]?pelda=parameter
+    Ez esetben az EntryPoint íly módon hívódik meg: https://demoapp.com/entryPoint?shopname=[shopname]&code=[code]&timestamp=[timestamp]&hmac=                  [hmac]&pelda=parameter
+
+
 7. A ShopRenter egy Iframeben megnyitja az alkalmazáshoz tartozó EntryPoint-ot. A request tartalmazni fogja a 2. pontban írt paramétereket.
 8. Feltelepítés után a ShopRenter csak az Entrypointra küld kéréseket. Minden esetben a 2. pontban írt paraméterekkel.
 
